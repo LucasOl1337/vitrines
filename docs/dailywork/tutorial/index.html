@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#172b24" />
+    <title>Seu primeiro dia no DailyWork — tutorial completo</title>
+    <meta
+      name="description"
+      content="Aprenda a usar o DailyWork no seu ritmo. Um tutorial em português, com cerca de 26 minutos e 12 capítulos para planejar, trabalhar, registrar e continuar."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Seu primeiro dia no DailyWork" />
+    <meta
+      property="og:description"
+      content="Um passo de cada vez. Tutorial em português com navegação por capítulos."
+    />
+    <meta
+      property="og:image"
+      content="https://lucasol1337.github.io/vitrines/dailywork/media/tutorial-poster.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://lucasol1337.github.io/vitrines/dailywork/tutorial/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="canonical"
+      href="https://lucasol1337.github.io/vitrines/dailywork/tutorial/"
+    />
+    <link rel="icon" href="../../icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f7f6f0;
+        --ink: #172b24;
+        --muted: #66716b;
+        --line: #dce0d7;
+        --green: #276e52;
+        --soft: #ebf0e8;
+        --accent: #c9e5ae;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          16px/1.65 "DM Sans",
+          sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Manrope, sans-serif;
+        line-height: 1.16;
+        letter-spacing: -0.045em;
+      }
+      p {
+        color: var(--muted);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+      button,
+      a {
+        touch-action: manipulation;
+      }
+      button {
+        cursor: pointer;
+        color: inherit;
+      }
+      a,
+      button,
+      input,
+      video {
+        outline-offset: 5px;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      video:focus-visible {
+        outline: 3px solid #588bff;
+      }
+      button:disabled {
+        cursor: default;
+      }
+      svg {
+        flex: none;
+        display: block;
+      }
+      button svg,
+      a svg {
+        pointer-events: none;
+      }
+      [hidden] {
+        display: none !important;
+      }
+      .wrap {
+        max-width: 1280px;
+        margin: auto;
+        padding: 0 44px;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+      }
+      .skip {
+        position: absolute;
+        top: -70px;
+        left: 20px;
+        background: var(--ink);
+        color: white;
+        padding: 12px 18px;
+        z-index: 10;
+      }
+      .skip:focus {
+        top: 12px;
+      }
+      .top {
+        border-bottom: 1px solid var(--line);
+      }
+      .top nav {
+        height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.045em;
+      }
+      .mark {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: var(--ink);
+        color: #d0e9b4;
+        font-size: 23px;
+        line-height: 1;
+      }
+      .back {
+        font-size: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+      }
+      .eyebrow {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: var(--green);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 80px;
+        align-items: end;
+        padding-top: 65px;
+        padding-bottom: 42px;
+      }
+      .hero h1 {
+        font-size: clamp(43px, 4.8vw, 67px);
+        line-height: 1.055;
+        margin-top: 22px;
+        font-weight: 700;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--green);
+      }
+      .hero-copy p {
+        font-size: 16px;
+        line-height: 1.8;
+        max-width: 420px;
+      }
+      .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+        flex-wrap: wrap;
+        margin-top: 23px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        background: var(--ink);
+        border: 1px solid var(--ink);
+        color: white;
+        padding: 13px 18px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        min-height: 46px;
+      }
+      .button:hover {
+        background: #28473a;
+        text-decoration: none;
+      }
+      .button.secondary {
+        background: transparent;
+        color: var(--ink);
+        border-color: #b7c8ba;
+      }
+      .button.secondary:hover {
+        background: #e4eddf;
+      }
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .meta {
+        display: flex;
+        gap: 26px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .meta span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .meta i {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+      .film {
+        padding: 12px;
+        background: var(--ink);
+        border-radius: 12px;
+        box-shadow: 0 22px 54px #10231914;
+      }
+      .film-bar {
+        padding: 4px 9px 13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        color: #b3c9bd;
+        text-transform: uppercase;
+      }
+      .film-bar strong {
+        font-weight: 600;
+        color: #edf5e9;
+      }
+      .film-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+        display: inline-block;
+        margin-right: 7px;
+      }
+      video {
+        width: 100%;
+        aspect-ratio: 16/9;
+        display: block;
+        border-radius: 5px;
+        background: #20302b;
+      }
+      .player-error {
+        background: #edf2e7;
+        border: 1px solid #bdcbbb;
+        border-radius: 7px;
+        margin-top: 15px;
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 13px;
+      }
+      .player-error strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 3px;
+      }
+      .player-error .button {
+        white-space: nowrap;
+      }
+      .watchbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 21px 2px;
+        border-bottom: 1px solid var(--line);
+      }
+      .current {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        min-width: 0;
+      }
+      .current-number {
+        width: 36px;
+        height: 36px;
+        background: var(--soft);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font:
+          700 12px Manrope,
+          sans-serif;
+        color: var(--green);
+        flex: none;
+      }
+      .current small {
+        display: block;
+        font-size: 8px;
+        letter-spacing: 0.11em;
+        color: var(--muted);
+        font-weight: 700;
+      }
+      .current strong {
+        font-size: 13px;
+        font-weight: 600;
+        display: block;
+        line-height: 1.5;
+      }
+      .copy-button {
+        border: 0;
+        background: transparent;
+        padding: 12px 0;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        white-space: nowrap;
+        font-weight: 600;
+      }
+      .copy-button:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .video-caption {
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-top: 14px;
+      }
+      .video-caption a {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .copy-fallback {
+        padding: 16px 0;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .copy-fallback label {
+        display: block;
+        margin-bottom: 7px;
+      }
+      .copy-fallback input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: white;
+        color: var(--ink);
+        padding: 11px;
+        font-size: 12px;
+      }
+      .chapters-section {
+        display: grid;
+        grid-template-columns: 265px 1fr;
+        gap: 58px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+      .chapter-intro h2 {
+        font-size: 32px;
+        margin-top: 17px;
+      }
+      .chapter-intro > p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-top: 19px;
+      }
+      .chapter-intro .hint {
+        font-size: 11px;
+        border-left: 2px solid #bfd0bb;
+        padding-left: 13px;
+        margin-top: 24px;
+      }
+      .chapter-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
+      }
+      .chapter-list li {
+        min-width: 0;
+      }
+      .chapter-button {
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fcfcf8;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          background 0.15s,
+          border-color 0.15s;
+        min-height: 158px;
+      }
+      .chapter-button:hover {
+        background: #edf2e7;
+        border-color: #adc3aa;
+      }
+      .chapter-button[aria-current] {
+        background: #e7efdf;
+        border-color: #91af83;
+      }
+      .chapter-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 9px;
+        color: var(--muted);
+        font-variant-numeric: tabular-nums;
+      }
+      .chapter-index {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--green);
+      }
+      .chapter-time {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        white-space: nowrap;
+      }
+      .chapter-title {
+        display: block;
+        font-family: Manrope, sans-serif;
+        font-size: 16px;
+        letter-spacing: -0.035em;
+        font-weight: 750;
+        line-height: 1.35;
+        margin-top: 12px;
+      }
+      .chapter-description {
+        display: block;
+        font-size: 11px;
+        line-height: 1.7;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .chapter-progress {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        background: var(--green);
+        width: 0;
+        pointer-events: none;
+      }
+      .chapter-button[aria-current] .chapter-time {
+        color: var(--green);
+      }
+      .first-day {
+        background: var(--ink);
+        color: #f5f7ee;
+        border-radius: 10px;
+        padding: 40px 43px;
+        margin-bottom: 52px;
+      }
+      .first-day .eyebrow {
+        color: #b9d895;
+      }
+      .first-day-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+        align-items: end;
+        margin-bottom: 29px;
+      }
+      .first-day h2 {
+        font-size: 32px;
+        margin-top: 13px;
+      }
+      .first-day-head p {
+        font-size: 13px;
+        color: #b8cbbf;
+        max-width: 340px;
+      }
+      .first-day-steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+      }
+      .first-step {
+        border-top: 1px solid #4b6253;
+        padding-top: 19px;
+      }
+      .first-step span {
+        font-size: 10px;
+        color: #bfdba8;
+        font-weight: 700;
+      }
+      .first-step h3 {
+        font-size: 18px;
+        margin-top: 12px;
+      }
+      .first-step p {
+        font-size: 12px;
+        color: #bbcdc0;
+        margin-top: 10px;
+        line-height: 1.75;
+      }
+      .first-step button {
+        background: transparent;
+        border: 0;
+        color: #d0e9b4;
+        padding: 12px 0 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        font-weight: 700;
+        min-height: 40px;
+      }
+      .first-step button:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .before-start {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 55px;
+      }
+      .before-start h2 {
+        font-size: 26px;
+        line-height: 1.25;
+      }
+      .before-start p {
+        font-size: 13px;
+        margin-top: 15px;
+      }
+      .before-start .text-link {
+        margin-top: 17px;
+        color: var(--green);
+      }
+      .footer {
+        border-top: 1px solid var(--line);
+        padding: 26px 0;
+      }
+      .footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .footer a {
+        color: var(--ink);
+      }
+      .noscript {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        margin-top: 24px;
+        font-size: 13px;
+      }
+      @media (max-width: 1050px) {
+        .wrap {
+          padding: 0 30px;
+        }
+        .hero {
+          gap: 40px;
+        }
+        .hero h1 {
+          font-size: 55px;
+        }
+        .chapters-section {
+          grid-template-columns: 220px 1fr;
+          gap: 30px;
+        }
+        .chapter-button {
+          padding: 17px;
+        }
+        .chapter-title {
+          font-size: 15px;
+        }
+        .first-day {
+          padding: 35px;
+        }
+      }
+      @media (max-width: 800px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 45px;
+          gap: 27px;
+        }
+        .hero-copy p {
+          max-width: 650px;
+          font-size: 15px;
+        }
+        .hero h1 {
+          font-size: 57px;
+        }
+        .chapters-section {
+          grid-template-columns: 1fr;
+          padding-top: 45px;
+          gap: 27px;
+        }
+        .chapter-intro {
+          max-width: 640px;
+        }
+        .chapter-intro h2 {
+          font-size: 31px;
+        }
+        .chapter-intro .hint {
+          margin-top: 15px;
+        }
+        .chapter-button {
+          min-height: 154px;
+        }
+        .first-day-head {
+          display: block;
+        }
+        .first-day-head p {
+          margin-top: 18px;
+          max-width: 620px;
+        }
+        .before-start {
+          gap: 30px;
+        }
+      }
+      @media (max-width: 580px) {
+        .wrap {
+          padding: 0 20px;
+        }
+        .top nav {
+          height: 74px;
+          gap: 15px;
+        }
+        .brand {
+          font-size: 20px;
+        }
+        .back {
+          font-size: 10px;
+          gap: 7px;
+        }
+        .hero {
+          padding-top: 37px;
+          padding-bottom: 28px;
+        }
+        .hero h1 {
+          font-size: 43px;
+        }
+        .hero .eyebrow {
+          font-size: 9px;
+        }
+        .hero-actions {
+          gap: 19px;
+        }
+        .hero-copy p {
+          font-size: 14px;
+        }
+        .meta {
+          gap: 16px;
+          font-size: 10px;
+          margin-bottom: 20px;
+        }
+        .film {
+          padding: 6px;
+          border-radius: 8px;
+        }
+        .film-bar {
+          font-size: 8px;
+          padding: 5px 5px 10px;
+          gap: 10px;
+        }
+        .film-bar span:last-child {
+          letter-spacing: 0;
+        }
+        .watchbar {
+          align-items: start;
+          gap: 12px;
+          flex-direction: column;
+          padding: 17px 0;
+        }
+        .current strong {
+          font-size: 12px;
+        }
+        .copy-button {
+          padding: 5px 0 0 50px;
+          font-size: 10px;
+          min-height: 32px;
+        }
+        .video-caption {
+          font-size: 10px;
+          gap: 7px;
+        }
+        .chapter-list {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .chapter-button {
+          padding: 17px 19px;
+          min-height: 130px;
+        }
+        .chapter-title {
+          font-size: 17px;
+          margin-top: 9px;
+        }
+        .chapter-description {
+          font-size: 12px;
+          margin-top: 7px;
+        }
+        .chapter-top {
+          font-size: 10px;
+        }
+        .chapter-intro h2 {
+          font-size: 29px;
+        }
+        .chapters-section {
+          padding-bottom: 43px;
+        }
+        .first-day {
+          padding: 28px 24px;
+          margin-bottom: 38px;
+        }
+        .first-day h2 {
+          font-size: 28px;
+        }
+        .first-day-steps {
+          grid-template-columns: 1fr;
+          gap: 23px;
+        }
+        .first-step h3 {
+          font-size: 20px;
+        }
+        .first-step p {
+          font-size: 13px;
+        }
+        .first-step button {
+          font-size: 12px;
+        }
+        .before-start {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          padding-bottom: 40px;
+        }
+        .before-start h2 {
+          font-size: 25px;
+        }
+        .footer .wrap {
+          flex-direction: column;
+          align-items: start;
+          gap: 9px;
+          font-size: 10px;
+        }
+        .player-error {
+          align-items: start;
+          flex-direction: column;
+          padding: 17px;
+          font-size: 12px;
+        }
+        .player-error .button {
+          font-size: 11px;
+        }
+        .button {
+          font-size: 11px;
+          padding: 12px 15px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .chapter-button {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <header class="top">
+      <div class="wrap">
+        <nav aria-label="Navegação principal">
+          <a class="brand" href="../"
+            ><span class="mark" aria-hidden="true">↗</span>DailyWork</a
+          ><a class="back" href="../"
+            ><span aria-hidden="true">←</span> Voltar à vitrine</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="conteudo" class="wrap">
+      <section class="hero" aria-labelledby="titulo">
+        <div>
+          <span class="eyebrow"
+            >Um guia para começar e voltar quando precisar</span
+          >
+          <h1 id="titulo">
+            Seu primeiro dia.<br /><em
+              >Um passo
+              <span style="white-space: nowrap">de cada vez.</span></em
+            >
+          </h1>
+        </div>
+        <div class="hero-copy">
+          <p>
+            Conheça os espaços, organize uma frente de trabalho e aprenda a
+            continuar de onde parou. Assista na ordem ou vá direto ao capítulo
+            que faz sentido para você.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#assistir"
+              >Começar o tutorial <span aria-hidden="true">↓</span></a
+            ><a class="text-link" href="transcricao.html"
+              >Ler o tutorial <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="meta" aria-label="Informações do tutorial">
+        <span
+          ><i aria-hidden="true"></i
+          ><span id="duration-label">Cerca de 26 minutos</span></span
+        ><span
+          ><i aria-hidden="true"></i
+          ><span id="chapter-count">12 capítulos</span></span
+        ><span><i aria-hidden="true"></i>Em português</span>
+      </div>
+      <section id="assistir" aria-label="Assistir ao tutorial">
+        <div class="film">
+          <div class="film-bar">
+            <strong
+              ><i class="film-dot" aria-hidden="true"></i>DailyWork / tutorial
+              completo</strong
+            ><span>No seu ritmo</span>
+          </div>
+          <video
+            id="tutorial-video"
+            controls
+            playsinline
+            preload="metadata"
+            tabindex="0"
+            poster="../media/tutorial-poster.jpg"
+            aria-label="Tutorial completo do DailyWork em português"
+          >
+            <source src="../media/tutorial-720p.mp4" type="video/mp4" />
+            <track
+              kind="captions"
+              src="../media/tutorial-legendas.vtt"
+              srclang="pt-BR"
+              label="Português — faixa adicional"
+            />
+            Seu navegador não reproduz este vídeo.
+            <a href="../media/tutorial-720p.mp4">Abrir o tutorial em vídeo</a>
+            ou <a href="transcricao.html">ler o tutorial</a>.
+          </video>
+        </div>
+        <div id="player-error" class="player-error" hidden>
+          <div>
+            <strong>Não foi possível carregar o vídeo.</strong>
+            <p>Tente novamente ou continue pela versão em texto.</p>
+          </div>
+          <button type="button" id="retry-video" class="button secondary">
+            Recarregar vídeo <span aria-hidden="true">↻</span>
+          </button>
+        </div>
+        <div class="watchbar">
+          <div class="current">
+            <span id="current-number" class="current-number" aria-hidden="true"
+              >01</span
+            >
+            <div>
+              <small>CAPÍTULO ATUAL</small
+              ><strong id="current-title">Escolha um capítulo</strong>
+            </div>
+          </div>
+          <button type="button" class="copy-button" id="copy-moment">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path
+                d="m10 13 4-4M8 16l-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 10a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1"
+                transform="translate(1 -1)"
+              /></svg
+            ><span id="copy-label">Copiar link deste momento</span>
+          </button>
+        </div>
+        <div class="video-caption">
+          <span>O vídeo já inclui legendas em português.</span
+          ><a href="transcricao.html"
+            >Prefere acompanhar lendo? Abra o texto completo ↗</a
+          >
+        </div>
+        <p
+          id="announcement"
+          class="sr-only"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div id="copy-fallback" class="copy-fallback" hidden>
+          <label for="share-url"
+            >Copie este link para compartilhar o momento selecionado:</label
+          ><input id="share-url" type="url" readonly />
+        </div>
+      </section>
+      <section
+        id="capitulos"
+        class="chapters-section"
+        aria-labelledby="chapters-title"
+      >
+        <div class="chapter-intro">
+          <span class="eyebrow">Encontre o que você precisa</span>
+          <h2 id="chapters-title">Um capítulo<br />para cada etapa.</h2>
+          <p>
+            Você pode pausar, experimentar no aplicativo e voltar. Ao escolher
+            um capítulo, o vídeo vai direto para o início daquela explicação.
+          </p>
+          <p class="hint">
+            Use Tab para escolher um capítulo e Enter ou Espaço para abri-lo. A
+            reprodução continua se o vídeo já estiver tocando.
+          </p>
+        </div>
+        <ol
+          id="chapter-list"
+          class="chapter-list"
+          aria-label="Capítulos do tutorial"
+        ></ol>
+      </section>
+      <section class="first-day" aria-labelledby="first-day-title">
+        <div class="first-day-head">
+          <div>
+            <span class="eyebrow">Um percurso para hoje</span>
+            <h2 id="first-day-title">
+              Comece pequeno.<br />O resto vem com o uso.
+            </h2>
+          </div>
+          <p>
+            No primeiro dia, basta se localizar, avançar uma frente e registrar
+            o que ficou. Explore os outros espaços quando precisar deles.
+          </p>
+        </div>
+        <div class="first-day-steps">
+          <article class="first-step">
+            <span>01 / ENCONTRE SEU LUGAR</span>
+            <h3>Reconheça os espaços.</h3>
+            <p>
+              Veja onde ficam o dia, o acervo e as ideias. Confira a data antes
+              de começar.
+            </p>
+            <button type="button" data-chapter="0">
+              Ver os primeiros passos <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="first-step">
+            <span>02 / DÊ UM PRÓXIMO PASSO</span>
+            <h3>Organize uma frente.</h3>
+            <p>
+              Defina o que pretende entregar. Depois, acompanhe o andamento no
+              capítulo seguinte.
+            </p>
+            <button type="button" data-chapter="1">
+              Aprender a organizar o dia <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+          <article class="first-step">
+            <span>03 / DEIXE CONTINUIDADE</span>
+            <h3>Guarde o que ficou.</h3>
+            <p>
+              Revise o resultado, confira as evidências e escolha o que deve
+              acompanhar o próximo dia.
+            </p>
+            <button type="button" data-chapter="11">
+              Ver o fechamento <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+        </div>
+      </section>
+      <section class="before-start" aria-label="Orientações para acompanhar">
+        <div>
+          <h2>Tenha o aplicativo por perto.</h2>
+          <p>
+            Assista a um trecho e experimente com um exemplo seu. Não é preciso
+            dominar todos os recursos para começar a organizar o trabalho.
+          </p>
+          <a class="text-link" href="../#instalar"
+            >Voltar às orientações para começar
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div>
+          <h2>Algumas etapas pedem configuração.</h2>
+          <p>
+            Recursos de IA, contas conectadas e publicação dependem das fontes,
+            autorizações e serviços disponíveis. O tutorial explica essas
+            condições e os pontos de revisão ao longo do caminho.
+          </p>
+          <a class="text-link" href="ajuda.html"
+            >Consultar a ajuda para começar <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <noscript
+        ><p class="noscript">
+          Você pode assistir pelos controles do vídeo. Para navegar pelos
+          capítulos nesta página, ative o JavaScript. A
+          <a href="transcricao.html">versão em texto</a> também está disponível.
+        </p></noscript
+      >
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <span>DailyWork · Um espaço para continuar.</span
+        ><a href="../">Voltar à vitrine ↗</a
+        ><a href="transcricao.html">Ler o tutorial ↗</a>
+        <a href="ajuda.html">Ajuda para começar ↗</a>
+      </div>
+    </footer>
+    <!-- Única fonte dos títulos, tempos e descrições dos capítulos.
+       Tempos sincronizados com o plano final revisado. -->
+    <script id="chapter-data" type="application/json">
+[
+  {
+    "title": "Primeiros passos",
+    "start": 0.0,
+    "end": 100.291667,
+    "description": "Reconheça os espaços, confira a instalação e encontre a data em que vai trabalhar."
+  },
+  {
+    "title": "Organizar o dia",
+    "start": 100.291667,
+    "end": 188.291667,
+    "description": "Prepare o dia, leia o plano e transforme uma intenção em uma frente de trabalho."
+  },
+  {
+    "title": "Executar e acompanhar",
+    "start": 188.291667,
+    "end": 299.916667,
+    "description": "Avance as frentes, acompanhe o que está acontecendo e saiba quando pausar ou cancelar."
+  },
+  {
+    "title": "Trabalhar com o Agente",
+    "start": 299.916667,
+    "end": 436.541667,
+    "description": "Inclua contexto, faça perguntas e revise as propostas antes de aplicá-las."
+  },
+  {
+    "title": "Construir o acervo",
+    "start": 436.541667,
+    "end": 569.083333,
+    "description": "Organize projetos, registros, imagens e relações no espaço Principal."
+  },
+  {
+    "title": "Usar o conhecimento",
+    "start": 569.083333,
+    "end": 620.875,
+    "description": "Encontre suas notas, siga as conexões e entenda onde editar o conteúdo."
+  },
+  {
+    "title": "Desenhar e explorar",
+    "start": 620.875,
+    "end": 922.791667,
+    "description": "Crie uma Lousa e explore desenho, texto, imagens, organização e atalhos."
+  },
+  {
+    "title": "Site e publicação",
+    "start": 922.791667,
+    "end": 987.416667,
+    "description": "Conheça a área Site e entenda as etapas de uma atualização pública."
+  },
+  {
+    "title": "Conectar contas externas",
+    "start": 987.416667,
+    "end": 1241.0,
+    "description": "Entenda contas, sessões, atividade e revisão de publicações em serviços externos."
+  },
+  {
+    "title": "Entender o que aconteceu",
+    "start": 1241.0,
+    "end": 1355.208333,
+    "description": "Leia o Sumário, reencontre suas mensagens e confira quais fontes estão disponíveis."
+  },
+  {
+    "title": "Aprender com o dia",
+    "start": 1355.208333,
+    "end": 1435.291667,
+    "description": "Revise aprendizados, responda às perguntas e converse sobre os registros da data."
+  },
+  {
+    "title": "Encerrar e continuar",
+    "start": 1435.291667,
+    "end": 1533.333333,
+    "description": "Confira as evidências, escolha o que guardar e prepare a continuidade do próximo dia."
+  }
+]
+    </script>
+    <script>
+      (() => {
+        "use strict";
+        const chapters = JSON.parse(
+          document.getElementById("chapter-data").textContent,
+        );
+        const video = document.getElementById("tutorial-video");
+        const list = document.getElementById("chapter-list");
+        const announcement = document.getElementById("announcement");
+        const errorPanel = document.getElementById("player-error");
+        const total = chapters[chapters.length - 1].end;
+        let pendingSeek = null;
+        let activeIndex = -1;
+        let lastKnownTime = 0;
+        let copyReset;
+        const formatTime = (seconds) => {
+          const whole = Math.max(0, Math.floor(seconds));
+          return `${Math.floor(whole / 60)}:${String(whole % 60).padStart(2, "0")}`;
+        };
+        const clampTime = (seconds) =>
+          Math.min(
+            Math.max(0, seconds),
+            Number.isFinite(video.duration)
+              ? Math.max(0, video.duration - 0.05)
+              : total - 0.05,
+          );
+        const readTime = () => {
+          const raw = new URL(window.location.href).searchParams.get("t");
+          const value = raw === null ? 0 : Number(raw);
+          return clampTime(Number.isFinite(value) ? value : 0);
+        };
+        const momentUrl = (time) => {
+          const url = new URL(window.location.href);
+          url.searchParams.set("t", String(Math.ceil(time * 1000) / 1000));
+          url.hash = "";
+          return url;
+        };
+        document.getElementById("duration-label").textContent =
+          `Cerca de ${Math.round(total / 60)} minutos`;
+        document.getElementById("chapter-count").textContent =
+          `${chapters.length} capítulos`;
+        const buttons = chapters.map((chapter, index) => {
+          const li = document.createElement("li");
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "chapter-button";
+          button.setAttribute(
+            "aria-label",
+            `Capítulo ${index + 1}: ${chapter.title}. Ir para ${formatTime(chapter.start)}.`,
+          );
+          const top = document.createElement("span");
+          top.className = "chapter-top";
+          const number = document.createElement("span");
+          number.className = "chapter-index";
+          number.textContent = String(index + 1).padStart(2, "0");
+          const time = document.createElement("span");
+          time.className = "chapter-time";
+          time.textContent = `${formatTime(chapter.start)} ↗`;
+          top.append(number, time);
+          const title = document.createElement("span");
+          title.className = "chapter-title";
+          title.textContent = chapter.title;
+          const description = document.createElement("span");
+          description.className = "chapter-description";
+          description.textContent = chapter.description;
+          const progress = document.createElement("span");
+          progress.className = "chapter-progress";
+          progress.setAttribute("aria-hidden", "true");
+          button.append(top, title, description, progress);
+          button.addEventListener("click", () => seekTo(chapter.start, true));
+          li.append(button);
+          list.append(li);
+          return button;
+        });
+        function updateChapter(time) {
+          let next = 0;
+          for (let index = 0; index < chapters.length; index++) {
+            if (time >= chapters[index].start) next = index;
+          }
+          if (next !== activeIndex) {
+            buttons.forEach((button, index) => {
+              if (index === next) button.setAttribute("aria-current", "step");
+              else button.removeAttribute("aria-current");
+            });
+            activeIndex = next;
+            document.getElementById("current-number").textContent = String(
+              next + 1,
+            ).padStart(2, "0");
+            document.getElementById("current-title").textContent =
+              chapters[next].title;
+          }
+          buttons.forEach((button, index) => {
+            const chapter = chapters[index];
+            const progress =
+              index === next
+                ? Math.min(
+                    100,
+                    Math.max(
+                      0,
+                      ((time - chapter.start) / (chapter.end - chapter.start)) *
+                        100,
+                    ),
+                  )
+                : 0;
+            button.querySelector(".chapter-progress").style.width =
+              `${progress}%`;
+          });
+        }
+        function applyPendingSeek() {
+          if (pendingSeek === null || video.readyState < 1) return;
+          const target = clampTime(pendingSeek);
+          try {
+            video.currentTime = target;
+            pendingSeek = null;
+            lastKnownTime = target;
+            updateChapter(target);
+          } catch {
+            // Aguarda os metadados se o navegador ainda não puder buscar o trecho.
+          }
+        }
+        function seekTo(seconds, userInitiated = false) {
+          const target = clampTime(seconds);
+          pendingSeek = target;
+          lastKnownTime = target;
+          updateChapter(target);
+          if (userInitiated) {
+            const url = momentUrl(target);
+            if (url.href !== window.location.href)
+              window.history.pushState(null, "", url);
+            announcement.textContent = `${chapters[activeIndex].title}. ${video.paused ? "Pressione Reproduzir para assistir." : "Indo para este capítulo."}`;
+            document.getElementById("assistir").scrollIntoView({
+              behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+                .matches
+                ? "instant"
+                : "smooth",
+              block: "start",
+            });
+            video.focus({ preventScroll: true });
+          }
+          applyPendingSeek();
+        }
+        video.addEventListener("loadedmetadata", () => {
+          errorPanel.hidden = true;
+          applyPendingSeek();
+        });
+        video.addEventListener("durationchange", applyPendingSeek);
+        video.addEventListener("timeupdate", () => {
+          if (pendingSeek !== null) return;
+          lastKnownTime = video.currentTime;
+          updateChapter(lastKnownTime);
+        });
+        function showMediaError() {
+          errorPanel.hidden = false;
+          announcement.textContent =
+            "Não foi possível carregar o vídeo. Tente recarregar ou continue pela versão em texto.";
+        }
+        video.addEventListener("error", showMediaError);
+        // A falha de uma fonte não propaga o evento de erro até o vídeo.
+        video.querySelector("source").addEventListener("error", showMediaError);
+        // O preload pode falhar antes de este script registrar os eventos.
+        if (video.error || video.networkState === video.NETWORK_NO_SOURCE) {
+          showMediaError();
+        }
+        document.getElementById("retry-video").addEventListener("click", () => {
+          pendingSeek = lastKnownTime;
+          errorPanel.hidden = true;
+          video.load();
+          video.focus({ preventScroll: true });
+        });
+        document.querySelectorAll("[data-chapter]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const chapter = chapters[Number(button.dataset.chapter)];
+            if (chapter) seekTo(chapter.start, true);
+          });
+        });
+        window.addEventListener("popstate", () => seekTo(readTime()));
+        document
+          .getElementById("copy-moment")
+          .addEventListener("click", async () => {
+            const url = momentUrl(pendingSeek ?? video.currentTime).href;
+            const fallback = document.getElementById("copy-fallback");
+            const input = document.getElementById("share-url");
+            input.value = url;
+            try {
+              await navigator.clipboard.writeText(url);
+              fallback.hidden = true;
+              document.getElementById("copy-label").textContent =
+                "Link copiado";
+              announcement.textContent = "Link deste momento copiado.";
+              window.clearTimeout(copyReset);
+              copyReset = window.setTimeout(() => {
+                document.getElementById("copy-label").textContent =
+                  "Copiar link deste momento";
+              }, 3000);
+            } catch {
+              fallback.hidden = false;
+              input.focus();
+              input.select();
+              announcement.textContent =
+                "O link está no campo abaixo. Copie o endereço para compartilhar.";
+            }
+          });
+        seekTo(readTime());
+        if (new URL(window.location.href).searchParams.has("t")) {
+          requestAnimationFrame(() =>
+            document
+              .getElementById("assistir")
+              .scrollIntoView({ block: "start" }),
+          );
+        }
+      })();
+    </script>
+  </body>
+</html>

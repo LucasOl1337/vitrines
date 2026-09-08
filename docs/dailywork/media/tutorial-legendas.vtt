@@ -1,0 +1,1372 @@
+WEBVTT
+
+00:00:00.400 --> 00:00:01.983
+Bem-vindo ao DailyWork.
+
+00:00:01.983 --> 00:00:07.443
+Vamos percorrer o aplicativo do começo ao fim: organizar um dia, trabalhar com o agente, explorar seu acervo,
+
+00:00:07.443 --> 00:00:10.719
+desenhar em lousas, conhecer conexões e revisar resultados.
+
+00:00:10.719 --> 00:00:13.886
+Os conteúdos são fictícios e pertencem a uma demonstração.
+
+00:00:13.886 --> 00:00:19.564
+Os passos que dependem de contas externas serão explicados condicionalmente, sem apresentar como realizada uma
+
+00:00:19.564 --> 00:00:21.420
+publicação que não aconteceu.
+
+00:00:22.442 --> 00:00:24.660
+A barra superior organiza seis destinos.
+
+00:00:24.660 --> 00:00:26.723
+Principal guarda seu acervo durável.
+
+00:00:26.723 --> 00:00:28.580
+Lousas reúne rascunhos visuais.
+
+00:00:28.580 --> 00:00:30.180
+Site mostra o site público.
+
+00:00:30.180 --> 00:00:32.037
+Conexões reúne contas externas.
+
+00:00:32.037 --> 00:00:36.576
+Diário acompanha frentes de trabalho, e Sumário diário transforma registros em aprendizado.
+
+00:00:36.576 --> 00:00:39.620
+Na instalação Omarchy, Super mais D abre ou recolhe a janela;
+
+00:00:39.620 --> 00:00:40.961
+no Windows, use Home.
+
+00:00:40.961 --> 00:00:43.902
+Fechar a janela pode manter o aplicativo em segundo plano.
+
+00:00:44.942 --> 00:00:47.738
+Se o DailyWork já está instalado, abra pelo atalho.
+
+00:00:47.738 --> 00:00:53.384
+Para esta versão distribuída como projeto, a preparação acontece no terminal, na pasta do aplicativo: com Node e
+
+00:00:53.384 --> 00:00:56.948
+dependências disponíveis, npm run app gera e abre a versão desktop.
+
+00:00:56.948 --> 00:01:01.279
+npm run install:linux ou npm run install:windows instala os atalhos da plataforma.
+
+00:01:01.279 --> 00:01:04.732
+A inteligência artificial precisa de seu provedor configurado;
+
+00:01:04.732 --> 00:01:07.748
+no padrão Grok CLI, instale o programa e faça grok login.
+
+00:01:07.748 --> 00:01:09.940
+Não há um cadastro geral no DailyWork.
+
+00:01:09.940 --> 00:01:14.162
+O ambiente de desenvolvimento usa npm run dev e mantém sua configuração separada.
+
+00:01:15.192 --> 00:01:17.151
+Confira a data antes de trabalhar.
+
+00:01:17.151 --> 00:01:21.227
+As setas avançam ou voltam um dia, e o calendário leva diretamente à data desejada.
+
+00:01:21.227 --> 00:01:23.927
+Quando você está longe da data atual, aparece Hoje.
+
+00:01:23.927 --> 00:01:26.204
+A troca preserva o modo Diário ou Sumário.
+
+00:01:26.204 --> 00:01:28.639
+O Diário também aceita planejamento futuro;
+
+00:01:28.639 --> 00:01:30.439
+o Sumário vai somente até hoje.
+
+00:01:30.439 --> 00:01:35.787
+Ao consultar um dia antigo, confie na data visível: o título Hoje pode continuar aparecendo no cabeçalho desta
+
+00:01:35.787 --> 00:01:36.581
+versão.
+
+00:01:36.581 --> 00:01:39.652
+Menus de Lousas e Conexões fecham com Escape ou clique fora.
+
+00:01:40.692 --> 00:01:45.343
+O Diário começa com a data e os contadores de frentes pendentes, em andamento e concluídas.
+
+00:01:45.343 --> 00:01:47.226
+A direção explica o foco geral.
+
+00:01:47.226 --> 00:01:50.548
+O plano pode reunir objetivo, ações e condição de fechamento.
+
+00:01:50.548 --> 00:01:55.753
+Depois aparecem as frentes de trabalho, cada uma com sua própria finalidade, passos e saída esperada.
+
+00:01:55.753 --> 00:01:59.242
+Registros e limites preservam checkpoints, decisões e acordos.
+
+00:01:59.242 --> 00:02:03.672
+Use essa leitura para entender o próximo movimento antes de alterar qualquer estado.
+
+00:02:04.692 --> 00:02:06.035
+Abra Preparar o dia.
+
+00:02:06.035 --> 00:02:09.689
+O seletor permite escolher um projeto ou inferir pelo conteúdo da data.
+
+00:02:09.689 --> 00:02:14.901
+O aplicativo reúne frentes abertas, notas de conhecimento, procedimentos sugeridos e sinais recentes.
+
+00:02:14.901 --> 00:02:17.480
+As quantidades mostram a extensão do contexto;
+
+00:02:17.480 --> 00:02:19.736
+cada quadro apresenta alguns exemplos.
+
+00:02:19.736 --> 00:02:23.659
+Leia os alertas: uma fonte ausente ou antiga reduz o que pode ser recomendado.
+
+00:02:23.659 --> 00:02:25.862
+Abrir essa área apenas prepara opções.
+
+00:02:26.900 --> 00:02:30.188
+Na lista de propostas, leia o título e o motivo de cada sugestão.
+
+00:02:30.188 --> 00:02:32.721
+Marque apenas o que faz sentido para esta data.
+
+00:02:32.721 --> 00:02:35.147
+O contador informa quantos itens entrarão.
+
+00:02:35.147 --> 00:02:39.081
+Adicionar ao meu dia confirma a escolha, mostra um recibo e atualiza o Resumo.
+
+00:02:39.081 --> 00:02:42.531
+Se o contexto tiver mudado, prepare novamente antes de confirmar.
+
+00:02:42.531 --> 00:02:45.010
+Você pode recolher a área a qualquer momento.
+
+00:02:46.025 --> 00:02:51.394
+Para criar uma frente pelo aplicativo, abra o Agente e descreva uma tarefa ou projeto com objetivo, passos e
+
+00:02:51.394 --> 00:02:52.764
+saída verificável.
+
+00:02:52.764 --> 00:02:55.831
+O Resumo não tem formulário próprio de criação ou edição.
+
+00:02:55.831 --> 00:02:58.899
+As entradas vêm das propostas de preparação ou do agente.
+
+00:02:58.899 --> 00:03:03.173
+Para corrigir uma frente existente, peça a alteração, revise a proposta e aplique.
+
+00:03:03.173 --> 00:03:07.665
+Neste exemplo, nossas frentes são escrever boas-vindas e conferir a página no celular.
+
+00:03:08.692 --> 00:03:11.658
+Uma frente pendente oferece Iniciar e Concluir direto.
+
+00:03:11.658 --> 00:03:15.001
+Quando está em andamento, você pode Marcar concluído ou Pausar.
+
+00:03:15.001 --> 00:03:17.213
+Pausar devolve a frente para pendente.
+
+00:03:17.213 --> 00:03:20.934
+Uma frente concluída oferece Reabrir, caso seja necessário continuar.
+
+00:03:20.934 --> 00:03:24.817
+Cada card tem seu próprio estado: várias frentes podem avançar em paralelo.
+
+00:03:24.817 --> 00:03:29.023
+Os passos dentro do card são instruções de leitura, não checkboxes independentes.
+
+00:03:29.023 --> 00:03:31.612
+Atualize o estado quando a situação real mudar.
+
+00:03:32.650 --> 00:03:35.578
+Excluir pede confirmação e retira a frente daquele dia.
+
+00:03:35.578 --> 00:03:37.974
+O conteúdo vai para um arquivo recuperável;
+
+00:03:37.974 --> 00:03:41.434
+não existe, nesta interface, um botão de lixeira para restaurá-lo.
+
+00:03:41.434 --> 00:03:44.043
+Cancele a confirmação se escolheu o card errado.
+
+00:03:44.043 --> 00:03:49.101
+Quando uma atualização falha, o aplicativo apresenta uma mensagem e pode restaurar o estado anterior.
+
+00:03:49.101 --> 00:03:51.390
+Confira o resultado antes de prosseguir.
+
+00:03:51.390 --> 00:03:55.010
+Para alterar o conteúdo sem excluir, use a proposta de edição do Agente.
+
+00:03:56.025 --> 00:03:58.833
+Fazer automaticamente atende frentes de software.
+
+00:03:58.833 --> 00:04:02.505
+O card precisa apontar para um repositório ou cópia de trabalho válida.
+
+00:04:02.505 --> 00:04:05.421
+Sem isso, aparece Defina o repositório desabilitado.
+
+00:04:05.421 --> 00:04:10.983
+No arquivo Markdown da frente, dentro do cabeçalho entre três traços, acrescente repositorio, dois-pontos, e o
+
+00:04:10.983 --> 00:04:13.143
+caminho completo da pasta do projeto.
+
+00:04:13.143 --> 00:04:17.571
+Com os requisitos atendidos, o aplicativo pode editar arquivos e executar validações.
+
+00:04:17.571 --> 00:04:21.081
+Fazer meu dia organiza as frentes não concluídas sequencialmente.
+
+00:04:21.081 --> 00:04:25.185
+Aqui explicamos o funcionamento sem executar trabalho nos seus projetos reais.
+
+00:04:25.185 --> 00:04:28.317
+O campo worktree também pode indicar uma cópia de trabalho.
+
+00:04:28.317 --> 00:04:30.693
+A pasta deve existir numa raiz autorizada;
+
+00:04:30.693 --> 00:04:33.015
+não há esse campo no formulário do Resumo.
+
+00:04:34.025 --> 00:04:37.310
+Durante uma execução, o painel informa a frente e a etapa atual.
+
+00:04:37.310 --> 00:04:40.003
+Cancelar solicita interrupção entre operações;
+
+00:04:40.003 --> 00:04:42.050
+não desfaz alterações anteriores.
+
+00:04:42.050 --> 00:04:47.274
+No final, o card mostra Feita automaticamente ou Precisa de atenção, com resumo e eventual uso de um modelo
+
+00:04:47.274 --> 00:04:48.352
+alternativo.
+
+00:04:48.352 --> 00:04:50.991
+A conclusão depende das evidências produzidas.
+
+00:04:50.991 --> 00:04:55.084
+Se houver falha ou trabalho parcial, revise antes de marcar a frente como pronta.
+
+00:04:55.084 --> 00:04:59.285
+Enquanto há uma execução ativa, os botões para iniciar outra ficam desabilitados.
+
+00:05:00.317 --> 00:05:03.340
+O botão Agente abre uma conversa vinculada ao dia visível.
+
+00:05:03.340 --> 00:05:06.894
+No topo, confirme o contexto, a contagem de cards e o estado da conexão.
+
+00:05:06.894 --> 00:05:09.175
+Escolha um modelo disponível no seletor.
+
+00:05:09.175 --> 00:05:14.479
+A instalação pode usar Grok CLI autenticado ou um provedor alternativo previamente configurado, por isso as
+
+00:05:14.479 --> 00:05:15.593
+opções variam.
+
+00:05:15.593 --> 00:05:19.094
+Se a configuração não carregar, Tentar reconectar refaz a consulta.
+
+00:05:19.094 --> 00:05:23.284
+Se a conexão ainda não está pronta, não é possível contar com uma resposta do serviço.
+
+00:05:23.284 --> 00:05:25.883
+Uma rota não listada no catálogo recebe um aviso;
+
+00:05:25.883 --> 00:05:27.687
+o envio ainda pode ser tentado.
+
+00:05:28.692 --> 00:05:33.180
+Próxima ação, Revisar prioridades e Resumir progresso são atalhos para perguntas úteis.
+
+00:05:33.180 --> 00:05:35.371
+Você também pode escrever livremente.
+
+00:05:35.371 --> 00:05:39.860
+Incluir contexto durável acrescenta orientação, práticas e projetos relevantes ao dia.
+
+00:05:39.860 --> 00:05:42.051
+A caixa aceita até oito mil caracteres.
+
+00:05:42.051 --> 00:05:43.067
+Enter envia;
+
+00:05:43.067 --> 00:05:45.044
+Shift mais Enter cria outra linha.
+
+00:05:45.044 --> 00:05:47.662
+Enquanto o agente trabalha, aguarde a resposta.
+
+00:05:47.662 --> 00:05:52.472
+Ele já recebe os cards do escopo, então não é preciso copiar cada tarefa para começar uma conversa.
+
+00:05:53.483 --> 00:05:56.467
+O clipe permite anexar uma imagem para ajudar na análise.
+
+00:05:56.467 --> 00:05:59.504
+São aceitos PNG, JPEG, WebP e GIF com até quatro megabytes.
+
+00:05:59.504 --> 00:06:02.807
+Escolha o arquivo, confira a prévia e escreva o que deseja saber.
+
+00:06:02.807 --> 00:06:05.045
+Você pode remover o anexo antes do envio.
+
+00:06:05.045 --> 00:06:08.401
+Há um anexo por mensagem, e o nome aparece como recibo na conversa.
+
+00:06:08.401 --> 00:06:10.799
+Imagem inválida ou grande demais gera erro;
+
+00:06:10.799 --> 00:06:12.823
+ajuste o arquivo e tente novamente.
+
+00:06:13.858 --> 00:06:17.125
+Quando você pede uma mudança, o agente apresenta uma proposta.
+
+00:06:17.125 --> 00:06:20.231
+Confira título, tipo, estado, texto e eventuais conexões.
+
+00:06:20.231 --> 00:06:23.820
+Em uma edição, Comparar com a versão atual revela o conteúdo anterior.
+
+00:06:23.820 --> 00:06:26.605
+Aplicar confirma aquela mudança individualmente;
+
+00:06:26.605 --> 00:06:28.051
+Descartar a abandona.
+
+00:06:28.051 --> 00:06:30.943
+Aguarde o recibo Aplicada e confira o card atualizado.
+
+00:06:30.943 --> 00:06:33.567
+Perguntar não altera automaticamente o quadro.
+
+00:06:33.567 --> 00:06:38.494
+A mesma lógica vale quando o agente propõe arquivar um registro ou preparar uma publicação externa.
+
+00:06:38.494 --> 00:06:40.476
+Erros permitem tentar novamente;
+
+00:06:40.476 --> 00:06:43.100
+conflito ou expiração exigem uma proposta nova.
+
+00:06:43.100 --> 00:06:48.348
+Links na resposta textual do agente não funcionam como navegação, e imagens externas não são exibidas ali.
+
+00:06:49.358 --> 00:06:52.080
+As conversas ficam separadas por data e Principal.
+
+00:06:52.080 --> 00:06:54.802
+Limpar remove o histórico local, sem apagar cards.
+
+00:06:54.802 --> 00:06:59.179
+Propostas expiram e podem ser invalidadas quando o registro muda ou o serviço reinicia.
+
+00:06:59.179 --> 00:07:02.488
+Se aparecer Peça novamente, solicite uma proposta atualizada.
+
+00:07:02.488 --> 00:07:05.904
+Erros de conexão, limite ou tempo esgotado também ficam visíveis.
+
+00:07:05.904 --> 00:07:07.345
+Feche pelo X ou Escape;
+
+00:07:07.345 --> 00:07:10.227
+em janelas compactas, o painel funciona como diálogo.
+
+00:07:10.227 --> 00:07:12.896
+A validade normal de uma proposta é de dez minutos;
+
+00:07:12.896 --> 00:07:15.938
+recarregar a conversa não reativa confirmações antigas.
+
+00:07:16.942 --> 00:07:20.713
+O Principal guarda materiais que continuam úteis depois que o dia termina.
+
+00:07:20.713 --> 00:07:25.546
+Os botões Portfólio, Entrevistas, Stack, Conhecimento e Tudo enquadram regiões do mesmo espaço.
+
+00:07:25.546 --> 00:07:27.724
+Portfólio destaca casos e evidências.
+
+00:07:27.724 --> 00:07:29.583
+Entrevistas reúne preparação.
+
+00:07:29.583 --> 00:07:31.973
+Stack organiza tecnologias e capacidades.
+
+00:07:31.973 --> 00:07:34.470
+Conhecimento mostra o mapa do acervo de notas.
+
+00:07:34.470 --> 00:07:37.232
+Tudo ajuda a entender a relação entre essas regiões.
+
+00:07:38.233 --> 00:07:41.458
+Abra Blocos para encontrar registros por título ou conteúdo.
+
+00:07:41.458 --> 00:07:44.683
+Clique num resultado para selecioná-lo e aproximar a câmera.
+
+00:07:44.683 --> 00:07:49.413
+O botão Editar no card, ou um duplo clique, abre o mesmo painel com aquele registro selecionado.
+
+00:07:49.413 --> 00:07:52.315
+Ali você muda título, tipo, estado e corpo em Markdown.
+
+00:07:52.315 --> 00:07:55.648
+As alterações são salvas automaticamente após uma breve pausa;
+
+00:07:55.648 --> 00:07:57.636
+Salvar força a gravação pendente.
+
+00:07:57.636 --> 00:08:02.097
+Consulte o painel também quando o texto do card for apenas um resumo do conteúdo completo.
+
+00:08:02.097 --> 00:08:04.570
+Se a busca não encontrar nada, reduza o termo.
+
+00:08:04.570 --> 00:08:07.902
+Escritas externas também atualizam o acervo automaticamente;
+
+00:08:07.902 --> 00:08:10.213
+falhas de salvamento aparecem como erro.
+
+00:08:11.233 --> 00:08:15.409
+Os botões do painel criam Nota, Tarefa, Projeto, Link ou Pessoa no centro visível.
+
+00:08:15.409 --> 00:08:19.585
+Outra entrada é o botão direito no espaço: digite um nome opcional e escolha o tipo.
+
+00:08:19.585 --> 00:08:22.025
+Enter nesse menu cria uma nota rapidamente;
+
+00:08:22.025 --> 00:08:23.761
+Escape ou clique fora fecha.
+
+00:08:23.761 --> 00:08:26.310
+Use cada tipo conforme a intenção do material.
+
+00:08:26.310 --> 00:08:31.408
+No Principal, os estados visuais representam maturidade: Em construção, Em destaque e Consolidado.
+
+00:08:31.408 --> 00:08:34.173
+Eles não devem ser lidos como prioridade do seu dia.
+
+00:08:35.192 --> 00:08:40.097
+Para inserir uma capa ou captura, use Mídia na barra do canvas ou arraste uma imagem para o espaço.
+
+00:08:40.097 --> 00:08:45.058
+O Principal aceita PNG, JPEG, WebP e GIF de até vinte e cinco megabytes e guarda a mídia com o acervo.
+
+00:08:45.058 --> 00:08:47.428
+Você pode mover e dimensionar seus cards.
+
+00:08:47.428 --> 00:08:50.735
+Uma seta ligada a dois blocos registra uma relação entre eles.
+
+00:08:50.735 --> 00:08:53.325
+A pessoa usa a foto configurada no aplicativo.
+
+00:08:53.325 --> 00:08:56.302
+Mantenha essas relações úteis à leitura do portfólio.
+
+00:08:57.317 --> 00:09:00.393
+Para rascunhos gráficos completos, escolha uma Lousa.
+
+00:09:00.393 --> 00:09:05.929
+O Principal preserva blocos, textos, imagens e relações, mas não todas as propriedades de um desenho livre.
+
+00:09:05.929 --> 00:09:09.956
+Páginas extras, vídeos, traços e ajustes avançados devem ficar nas Lousas.
+
+00:09:09.956 --> 00:09:14.318
+O Agente do Principal pode revisar portfólio, resumir Stack e encontrar conexões;
+
+00:09:14.318 --> 00:09:18.177
+lê o conhecimento, mas só propõe mudanças nos cards editáveis do acervo.
+
+00:09:18.177 --> 00:09:23.154
+Não conte com páginas adicionais, rotação, recorte ou estilos finos persistidos no Principal.
+
+00:09:23.154 --> 00:09:28.467
+Para arquivar seu último bloco, use a exclusão individual pelo Agente, não uma limpeza total do canvas.
+
+00:09:29.483 --> 00:09:32.722
+Buscar no vault encontra notas pelo título, caminho ou resumo.
+
+00:09:32.722 --> 00:09:35.323
+A lista mostra até oito resultados de cada busca.
+
+00:09:35.323 --> 00:09:39.358
+Clique no resultado, em Ler nota ou dê um duplo clique no card para abrir a leitura.
+
+00:09:39.358 --> 00:09:42.332
+O painel apresenta grupo, caminho e data de atualização.
+
+00:09:42.332 --> 00:09:44.561
+Links internos podem levar a outra nota;
+
+00:09:44.561 --> 00:09:46.685
+links externos abrem sua referência.
+
+00:09:46.685 --> 00:09:47.906
+O X fecha o leitor.
+
+00:09:47.906 --> 00:09:51.463
+Esse mapa acompanha a fonte original, sem criar outra cópia das notas.
+
+00:09:52.483 --> 00:09:54.587
+Editar fonte abre o conteúdo da nota.
+
+00:09:54.587 --> 00:09:58.525
+Faça a alteração e escolha Salvar no vault, ou Cancelar para voltar à leitura.
+
+00:09:58.525 --> 00:10:01.977
+O aplicativo grava na fonte original e cria um backup recuperável.
+
+00:10:01.977 --> 00:10:06.886
+Se a nota tiver mudado durante a edição, o conflito pede uma nova leitura antes de salvar novamente.
+
+00:10:06.886 --> 00:10:09.367
+A nota raiz LUCAS permanece somente leitura.
+
+00:10:09.367 --> 00:10:14.653
+Quando o acervo estiver ausente ou inacessível, será necessário corrigir a configuração da fonte antes de
+
+00:10:14.653 --> 00:10:15.624
+continuar.
+
+00:10:15.624 --> 00:10:17.566
+A nota aceita até dois megabytes.
+
+00:10:17.566 --> 00:10:20.263
+Fechar o leitor abandona a edição ainda não salva.
+
+00:10:21.275 --> 00:10:24.647
+Abra Lousas, escolha Nova, dê um nome e confirme em Criar ou Enter.
+
+00:10:24.647 --> 00:10:26.735
+O nome aparece normalizado na lista.
+
+00:10:26.735 --> 00:10:31.231
+Cada lousa é um desenho independente, salvo automaticamente e também ao trocar de espaço.
+
+00:10:31.231 --> 00:10:32.890
+Volte a ela pelo mesmo menu.
+
+00:10:32.890 --> 00:10:37.654
+O ícone de arquivo retira a lousa da lista, preservando uma cópia recuperável fora da interface.
+
+00:10:37.654 --> 00:10:41.829
+Se a lousa foi preparada como apresentação, ela poderá abrir somente para leitura.
+
+00:10:41.829 --> 00:10:44.184
+Arquivar a lousa aberta leva ao Principal.
+
+00:10:44.184 --> 00:10:45.789
+Nome vazio não cria lousa;
+
+00:10:45.789 --> 00:10:48.305
+falhas de criação ou arquivo aparecem no menu.
+
+00:10:49.317 --> 00:10:53.542
+Comece com Seleção, tecla V, para escolher um objeto ou arrastar uma área de seleção.
+
+00:10:53.542 --> 00:10:55.682
+Use as alças para dimensionar e girar.
+
+00:10:55.682 --> 00:10:57.393
+A Mão, tecla H, move a câmera;
+
+00:10:57.393 --> 00:11:00.175
+segurar Espaço também ajuda a passear pelo desenho.
+
+00:11:00.175 --> 00:11:04.186
+Delete remove a seleção, Control mais D duplica, Control mais A seleciona tudo.
+
+00:11:04.186 --> 00:11:07.288
+Desfazer usa Control mais Z e Refazer usa Control, Shift e Z.
+
+00:11:07.288 --> 00:11:10.177
+Recortar, copiar e colar seguem os atalhos habituais.
+
+00:11:11.192 --> 00:11:14.324
+A barra oferece desenho, borracha, setas, texto, notas e mídia.
+
+00:11:14.324 --> 00:11:19.529
+Há retângulo, elipse, triângulo, losangos, hexágono, oval, estrela, nuvem, coração, caixas com marcas e setas
+
+00:11:19.529 --> 00:11:20.540
+direcionais.
+
+00:11:20.540 --> 00:11:23.369
+Abra ferramentas extras para ver o que não coube na barra.
+
+00:11:23.369 --> 00:11:24.734
+Linha conecta pontos;
+
+00:11:24.734 --> 00:11:26.098
+marca-texto destaca;
+
+00:11:26.098 --> 00:11:27.866
+laser aponta temporariamente.
+
+00:11:27.866 --> 00:11:29.332
+O frame reúne uma região.
+
+00:11:30.358 --> 00:11:32.657
+O painel de estilo muda conforme a seleção.
+
+00:11:32.657 --> 00:11:36.158
+Experimente cor, opacidade, preenchimento, tipo de traço e tamanho.
+
+00:11:36.158 --> 00:11:38.352
+Em textos, escolha fonte e alinhamento.
+
+00:11:38.352 --> 00:11:40.912
+Em formas, ajuste posição do rótulo e geometria.
+
+00:11:40.912 --> 00:11:42.845
+Em setas, altere formato e pontas;
+
+00:11:42.845 --> 00:11:44.726
+em linhas, escolha curva ou reta.
+
+00:11:44.726 --> 00:11:46.502
+Edite o texto com duplo clique.
+
+00:11:46.502 --> 00:11:50.212
+A barra de texto oferece negrito, itálico, código, link, lista e destaque.
+
+00:11:50.212 --> 00:11:53.033
+Os estilos disponíveis dependem do objeto escolhido.
+
+00:11:53.033 --> 00:11:57.578
+O controle de opacidade oferece dez, vinte e cinco, cinquenta, setenta e cinco e cem por cento.
+
+00:11:58.608 --> 00:12:01.626
+Selecione vários objetos para alinhar bordas ou centros.
+
+00:12:01.626 --> 00:12:04.697
+Com três ou mais, distribuir ajuda a igualar os intervalos.
+
+00:12:04.697 --> 00:12:09.250
+As opções de organização também incluem empilhar, compactar e esticar, quando aplicáveis.
+
+00:12:09.250 --> 00:12:11.102
+Agrupar mantém objetos juntos;
+
+00:12:11.102 --> 00:12:12.426
+Desagrupar separa.
+
+00:12:12.426 --> 00:12:15.655
+Trazer para frente e enviar para trás controlam sobreposição.
+
+00:12:15.655 --> 00:12:19.150
+Você também pode girar, espelhar, bloquear ou desbloquear objetos.
+
+00:12:19.150 --> 00:12:22.379
+Essas ações aparecem no menu contextual e nas ações da seleção;
+
+00:12:22.379 --> 00:12:24.708
+controles cinzentos pedem outra seleção.
+
+00:12:25.733 --> 00:12:31.203
+Selecione uma imagem para substituir o arquivo, recortar, ajustar o zoom do recorte e escolher uma proporção.
+
+00:12:31.203 --> 00:12:33.423
+Confirme a edição pelo botão indicado;
+
+00:12:33.423 --> 00:12:36.455
+durante a manipulação, Enter confirma e Escape cancela.
+
+00:12:36.455 --> 00:12:39.542
+Texto alternativo descreve a mídia para acessibilidade.
+
+00:12:39.542 --> 00:12:41.654
+Baixar original recupera o arquivo.
+
+00:12:41.654 --> 00:12:45.986
+Vídeos oferecem reprodução e controles próprios, além de substituição e descrição.
+
+00:12:45.986 --> 00:12:48.910
+Incorporações funcionam para serviços compatíveis.
+
+00:12:48.910 --> 00:12:52.754
+Use esses recursos na Lousa quando precisar preservar o desenho completo.
+
+00:12:52.754 --> 00:12:55.624
+As proporções incluem original, quadrado e círculo.
+
+00:12:55.624 --> 00:12:58.873
+Um link de objeto também pode ser editado pelo menu da seleção.
+
+00:12:59.900 --> 00:13:05.098
+O menu de páginas permite criar, escolher, renomear, duplicar, reordenar e excluir páginas da Lousa.
+
+00:13:05.098 --> 00:13:08.637
+Pelo contexto, mova uma seleção para outra página ou para uma nova.
+
+00:13:08.637 --> 00:13:13.006
+Frames delimitam partes do trabalho e podem ser ajustados ao conteúdo ou removidos.
+
+00:13:13.006 --> 00:13:18.536
+Para compartilhar uma imagem do desenho, exporte a seleção ou a página como PNG ou SVG, com fundo transparente
+
+00:13:18.536 --> 00:13:19.697
+quando quiser.
+
+00:13:19.697 --> 00:13:23.070
+Também há copiar como imagem e converter uma seleção em imagem.
+
+00:13:24.108 --> 00:13:26.628
+Há opções adicionais nos menus contextuais.
+
+00:13:26.628 --> 00:13:31.504
+Quando compatível, converta uma incorporação em marcador de link e de volta para incorporação.
+
+00:13:31.504 --> 00:13:36.325
+Em texto enriquecido, o diálogo de atalhos também ensina riscado, títulos e listas numeradas.
+
+00:13:36.325 --> 00:13:40.324
+Copiar como PNG ou SVG leva uma imagem da seleção para a área de transferência.
+
+00:13:40.324 --> 00:13:43.447
+Desbloquear tudo libera os objetos bloqueados da página.
+
+00:13:43.447 --> 00:13:46.405
+Frames podem ser removidos preservando seu conteúdo.
+
+00:13:46.405 --> 00:13:49.144
+Essas operações dependem do objeto selecionado;
+
+00:13:49.144 --> 00:13:51.883
+uma exportação de imagem não publica nada online.
+
+00:13:51.883 --> 00:13:55.608
+As Lousas atuais não têm sala colaborativa ou chat com outros usuários.
+
+00:13:56.608 --> 00:13:59.962
+No zoom, use mais, menos, cem por cento, ajustar tudo ou seleção.
+
+00:13:59.962 --> 00:14:02.884
+Shift com zero, um e dois acessa esses enquadramentos.
+
+00:14:02.884 --> 00:14:05.210
+Voltar ao conteúdo reencontra o desenho.
+
+00:14:05.210 --> 00:14:10.836
+Preferências reúne encaixe, grade, trava de ferramenta, foco, tamanho dinâmico, rolagem nas bordas, colagem no
+
+00:14:10.836 --> 00:14:13.325
+cursor e seleção por envolvimento completo.
+
+00:14:13.325 --> 00:14:18.410
+Também oferece tema, idioma, mouse ou trackpad, inverter zoom, reduzir movimento e acessibilidade.
+
+00:14:18.410 --> 00:14:21.439
+O minimapa, quando visível, também ajuda na orientação.
+
+00:14:21.439 --> 00:14:25.388
+O modo de depuração é uma opção técnica, sem necessidade para o uso cotidiano.
+
+00:14:26.400 --> 00:14:31.038
+O menu de atalhos reúne combinações completas, inclusive formatação e navegação acessível.
+
+00:14:31.038 --> 00:14:33.064
+Control, Alt e barra abre o diálogo.
+
+00:14:33.064 --> 00:14:34.504
+Tab percorre objetos;
+
+00:14:34.504 --> 00:14:36.690
+setas movem a seleção, e Shift acelera.
+
+00:14:36.690 --> 00:14:38.609
+Control mais Enter abre estilos.
+
+00:14:38.609 --> 00:14:41.915
+Observe se o foco está no texto ou no canvas antes de usar atalhos.
+
+00:14:41.915 --> 00:14:46.340
+Quando terminar, troque de espaço pela barra superior: o DailyWork salva a Lousa ao sair.
+
+00:14:47.358 --> 00:14:52.658
+Para trocar de ferramenta pelo teclado: D desenha, E apaga, A cria seta, T texto, N nota, R retângulo, O elipse,
+
+00:14:52.658 --> 00:14:54.195
+L linha, F frame e K laser.
+
+00:14:54.195 --> 00:14:56.050
+Shift mais D ativa marca-texto;
+
+00:14:56.050 --> 00:14:57.428
+Q trava a ferramenta;
+
+00:14:57.428 --> 00:14:59.124
+Control mais U insere mídia.
+
+00:14:59.124 --> 00:15:01.615
+Z acessa zoom e Shift mais Z dá uma visão rápida.
+
+00:15:01.615 --> 00:15:05.219
+Para navegar sem mouse, Control com setas escolhe objetos por direção;
+
+00:15:05.219 --> 00:15:08.134
+Control, Shift e setas verticais entra ou sai de grupos.
+
+00:15:08.134 --> 00:15:11.738
+Espaço com setas move a câmera, e Control, Shift e Enter abre o contexto.
+
+00:15:11.738 --> 00:15:16.296
+Preferências permite ativar ou desativar atalhos e habilitar acessibilidade aprimorada.
+
+00:15:16.296 --> 00:15:19.793
+Consulte o diálogo para girar, dimensionar e formatar pelo teclado;
+
+00:15:19.793 --> 00:15:22.178
+no macOS, use Command como tecla principal.
+
+00:15:23.192 --> 00:15:25.737
+Site abre o site público dentro do DailyWork.
+
+00:15:25.737 --> 00:15:30.771
+Você pode navegar pelo conteúdo incorporado, recarregar a página ou escolher Abrir no navegador.
+
+00:15:30.771 --> 00:15:33.980
+O indicador de carregamento acompanha essa visualização.
+
+00:15:33.980 --> 00:15:37.244
+A publicação é um recurso separado, acessado em Integração.
+
+00:15:37.244 --> 00:15:41.504
+Conseguir visualizar o site não significa que sua atualização esteja conectada.
+
+00:15:41.504 --> 00:15:46.262
+Nesta demonstração não vamos enviar uma versão para produção nem exibir credenciais reais.
+
+00:15:47.275 --> 00:15:51.461
+Em Integração, veja se a publicação está conectada e se o serviço remoto responde.
+
+00:15:51.461 --> 00:15:55.592
+No aplicativo desktop, uma credencial válida pode ser salva no campo protegido.
+
+00:15:55.592 --> 00:16:00.321
+Com tudo configurado, Preparar atualização compara a projeção local com a versão publicada.
+
+00:16:00.321 --> 00:16:03.746
+Se houver diferença, revise e confirme a publicação, ou cancele.
+
+00:16:03.746 --> 00:16:06.682
+Se forem iguais, o painel informa que está atualizado.
+
+00:16:06.682 --> 00:16:09.617
+Abaixo ficam métricas agregadas de eventos anônimos.
+
+00:16:09.617 --> 00:16:13.042
+Essa configuração depende do serviço de publicação disponível.
+
+00:16:13.042 --> 00:16:16.086
+O token precisa ter pelo menos vinte e quatro caracteres.
+
+00:16:16.086 --> 00:16:21.685
+O painel apresenta identificadores da versão local e publicada, versão do formato e métricas dos últimos trinta
+
+00:16:21.685 --> 00:16:22.392
+dias.
+
+00:16:22.392 --> 00:16:26.795
+No navegador de desenvolvimento, essa integração de publicação não está disponível.
+
+00:16:27.817 --> 00:16:30.406
+Conexões oferece GitHub, LinkedIn, X e Reddit.
+
+00:16:30.406 --> 00:16:33.534
+No desktop, cada rede abre num visualizador com sua sessão.
+
+00:16:33.534 --> 00:16:36.608
+Voltar, Recarregar e Abrir no navegador ajudam a navegar.
+
+00:16:36.608 --> 00:16:39.521
+Painel mostra três abas: Conta, Publicar e Atividade.
+
+00:16:39.521 --> 00:16:42.487
+A sessão visual e a credencial da API são independentes.
+
+00:16:42.487 --> 00:16:46.047
+Estar logado no site não conecta automaticamente as ações do painel.
+
+00:16:46.047 --> 00:16:51.657
+No ambiente de desenvolvimento em navegador, o visualizador não existe, mas o painel da API continua disponível.
+
+00:16:52.692 --> 00:16:56.676
+A aba Conta mostra estado, origem da credencial e perfil, quando disponível.
+
+00:16:56.676 --> 00:17:00.114
+Preencha os campos exigidos pela rede e use Salvar com segurança.
+
+00:17:00.114 --> 00:17:03.771
+Nas redes com autorização, continue no navegador e aguarde o retorno.
+
+00:17:03.771 --> 00:17:05.954
+Remover credencial desconecta a API.
+
+00:17:05.954 --> 00:17:08.082
+Sair do viewer limpa a sessão visual.
+
+00:17:08.082 --> 00:17:11.739
+Usar sessão do Chromium tenta trazer a sessão do navegador instalado.
+
+00:17:11.739 --> 00:17:17.142
+Esses controles afetam a conta escolhida e não serão usados sobre seus logins pessoais nesta demonstração.
+
+00:17:17.142 --> 00:17:19.980
+O painel informa expiração e falhas de autorização.
+
+00:17:19.980 --> 00:17:23.528
+Importar uma sessão pode informar que não havia login no navegador.
+
+00:17:23.528 --> 00:17:26.912
+O perfil mostra as informações disponibilizadas por cada rede.
+
+00:17:27.942 --> 00:17:32.954
+Na aba Publicar, você pode escrever diretamente ou fornecer um briefing e pedir um rascunho ao agente.
+
+00:17:32.954 --> 00:17:35.726
+O redator usa o contexto de hoje, quando disponível.
+
+00:17:35.726 --> 00:17:38.605
+Revise todos os campos e escolha Preparar publicação.
+
+00:17:38.605 --> 00:17:41.111
+A prévia mostra destino, conteúdo e validade.
+
+00:17:41.111 --> 00:17:43.084
+Voltar e editar permite corrigir.
+
+00:17:43.084 --> 00:17:45.590
+Confirmar e publicar é o momento do envio real.
+
+00:17:45.590 --> 00:17:48.523
+Depois do sucesso, aparece um recibo e Nova publicação.
+
+00:17:48.523 --> 00:17:51.722
+Sem API conectada, preparar o envio permanece indisponível.
+
+00:17:52.733 --> 00:17:57.680
+No GitHub, a API pode reutilizar uma sessão autenticada do programa gh ou receber um token pessoal.
+
+00:17:57.680 --> 00:18:01.539
+Em Publicar, escolha Issue para informar repositório, título e conteúdo.
+
+00:18:01.539 --> 00:18:05.181
+Comentário pede repositório, número da issue ou pull request e texto.
+
+00:18:05.181 --> 00:18:07.845
+Gist pede descrição, nome de arquivo e conteúdo;
+
+00:18:07.845 --> 00:18:09.856
+o checkbox define se será público.
+
+00:18:09.856 --> 00:18:13.280
+Desmarcado significa secreto por endereço, não criptografado.
+
+00:18:13.280 --> 00:18:17.792
+O painel não cria pull requests nem envia alterações do repositório por esse formulário.
+
+00:18:17.792 --> 00:18:23.282
+O formulário aceita título até duzentos e cinquenta e seis caracteres, corpo até sessenta mil e nome de arquivo
+
+00:18:23.282 --> 00:18:24.532
+até cento e vinte.
+
+00:18:24.532 --> 00:18:27.413
+O token precisa ter permissões para a ação escolhida.
+
+00:18:28.442 --> 00:18:34.068
+No LinkedIn, configure o aplicativo autorizado e siga Autorizar no navegador, ou use um token de acesso válido.
+
+00:18:34.068 --> 00:18:39.474
+O formulário publica texto de até três mil caracteres, com visibilidade pública ou somente para conexões.
+
+00:18:39.474 --> 00:18:42.066
+Você também pode destacar um link e seu título.
+
+00:18:42.066 --> 00:18:44.273
+Revise a prévia antes da confirmação.
+
+00:18:44.273 --> 00:18:48.300
+O perfil pode ser lido, mas a API pessoal não fornece o histórico de atividade;
+
+00:18:48.300 --> 00:18:51.278
+para acompanhar o feed, use a navegação visual da rede.
+
+00:18:51.278 --> 00:18:55.912
+A aba Conta orienta Client ID, secret e endereço de retorno para configurar a autorização.
+
+00:18:55.912 --> 00:18:58.615
+O título do link aceita até duzentos caracteres;
+
+00:18:58.615 --> 00:19:02.752
+não há upload de imagem nem publicação em página empresarial nesse formulário.
+
+00:19:03.775 --> 00:19:09.078
+No X, use uma configuração de aplicativo com acesso adequado e autorização da conta, ou um token de usuário.
+
+00:19:09.078 --> 00:19:12.108
+O texto do post aceita até duzentos e oitenta caracteres.
+
+00:19:12.108 --> 00:19:16.004
+Para responder, informe opcionalmente o identificador do post de destino.
+
+00:19:16.004 --> 00:19:17.789
+Confira o contador e a prévia.
+
+00:19:17.789 --> 00:19:20.657
+Nesta versão, o compositor envia um post ou resposta;
+
+00:19:20.657 --> 00:19:23.579
+ele não oferece sequência de posts nem upload de mídia.
+
+00:19:23.579 --> 00:19:26.879
+A leitura de atividade depende das permissões e limites da API.
+
+00:19:26.879 --> 00:19:29.747
+Na configuração, Client ID identifica o aplicativo;
+
+00:19:29.747 --> 00:19:32.615
+secret é necessário apenas para o tipo confidencial.
+
+00:19:32.615 --> 00:19:35.645
+A aba Conta informa o endereço de retorno da autorização.
+
+00:19:36.650 --> 00:19:41.128
+No Reddit, a configuração usa um aplicativo do tipo script e os dados exigidos na aba Conta.
+
+00:19:41.128 --> 00:19:44.114
+Para um post de texto, informe subreddit, título e corpo.
+
+00:19:44.114 --> 00:19:46.993
+Para um post de link, use subreddit, título e endereço.
+
+00:19:46.993 --> 00:19:50.245
+Para comentário, informe o identificador do alvo e a mensagem.
+
+00:19:50.245 --> 00:19:52.591
+Os campos mudam conforme o tipo escolhido.
+
+00:19:52.591 --> 00:19:57.176
+Leia as orientações exibidas e confira as regras da comunidade antes de uma publicação real.
+
+00:19:57.176 --> 00:20:00.108
+Credenciais não devem aparecer numa gravação pública.
+
+00:20:00.108 --> 00:20:01.974
+Informe o subreddit sem barra r.
+
+00:20:01.974 --> 00:20:04.373
+Títulos aceitam até trezentos caracteres;
+
+00:20:04.373 --> 00:20:06.399
+o corpo de um post, até quarenta mil.
+
+00:20:06.399 --> 00:20:09.864
+Comentários usam alvo iniciado por t1 ou t3 e podem ter limite menor.
+
+00:20:09.864 --> 00:20:12.850
+A ajuda explica a entrada com verificação em duas etapas.
+
+00:20:13.858 --> 00:20:18.125
+Atividade permite escolher uma data até hoje e atualizar os registros disponíveis.
+
+00:20:18.125 --> 00:20:23.310
+Os itens mostram tipo, título, texto, horário e link de origem, quando a rede fornece essas informações.
+
+00:20:23.310 --> 00:20:26.011
+Essa atividade também alimenta o Sumário diário.
+
+00:20:26.011 --> 00:20:28.820
+Nenhum item pode significar ausência de atividade;
+
+00:20:28.820 --> 00:20:32.006
+erro de leitura é uma situação diferente e aparece no painel.
+
+00:20:32.006 --> 00:20:34.491
+Credencial expirada pede nova autorização.
+
+00:20:34.491 --> 00:20:37.300
+Uma proposta vencida deve ser preparada novamente.
+
+00:20:37.300 --> 00:20:40.378
+Confirme sucesso apenas quando houver recibo do serviço.
+
+00:20:41.400 --> 00:20:43.553
+Abra Sumário diário na data desejada.
+
+00:20:43.553 --> 00:20:46.838
+Se necessário, o aplicativo coleta os registros disponíveis.
+
+00:20:46.838 --> 00:20:52.114
+Com coleta completa, conversas suficientes e conexão ao modelo, a análise pode começar automaticamente.
+
+00:20:52.114 --> 00:20:54.859
+Escolha o modelo e acompanhe etapas e porcentagem.
+
+00:20:54.859 --> 00:20:57.390
+Resumo mostra a leitura com autoria e horário.
+
+00:20:57.390 --> 00:21:02.773
+Aqui vemos uma análise realmente produzida pelo aplicativo sobre uma conversa fictícia preparada para este
+
+00:21:02.773 --> 00:21:03.850
+treinamento.
+
+00:21:04.858 --> 00:21:06.636
+Coletar encontra registros;
+
+00:21:06.636 --> 00:21:08.683
+analisar produz uma leitura deles.
+
+00:21:08.683 --> 00:21:12.561
+Se chegarem conversas novas, a análise anterior pode ficar desatualizada.
+
+00:21:12.561 --> 00:21:18.055
+Atualizar análise refaz a leitura, e Gerar nova análise permite produzir outra interpretação quando já existe
+
+00:21:18.055 --> 00:21:18.701
+uma.
+
+00:21:18.701 --> 00:21:23.226
+O botão fica indisponível enquanto a coleta estiver incompleta ou a análise em andamento.
+
+00:21:23.226 --> 00:21:26.943
+Em caso de erro, leia a mensagem e tente novamente após resolver a origem.
+
+00:21:26.943 --> 00:21:30.228
+Uma tela vazia não comprova que você não trabalhou naquele dia.
+
+00:21:31.233 --> 00:21:36.917
+Suas mensagens reúne todas as mensagens humanas detectadas nas fontes encontradas, sem amostragem nessa lista.
+
+00:21:36.917 --> 00:21:39.540
+A busca procura no texto e nos dados associados.
+
+00:21:39.540 --> 00:21:44.076
+Combine o filtro por fonte com o filtro por conversa para localizar um pedido específico.
+
+00:21:44.076 --> 00:21:46.754
+O contador mostra quantos resultados restaram.
+
+00:21:46.754 --> 00:21:49.979
+Cada entrada informa horário, origem, conversa e conteúdo.
+
+00:21:49.979 --> 00:21:54.569
+Quando existir material estruturado adicional, Ver dados técnicos permite expandi-lo.
+
+00:21:54.569 --> 00:21:57.302
+Se nada combinar com os filtros, ajuste a seleção.
+
+00:21:57.302 --> 00:22:01.674
+Se as mensagens ainda não estiverem separadas, Atualizar mensagens prepara a lista.
+
+00:22:01.674 --> 00:22:04.133
+Mudar a fonte redefine o filtro de conversa.
+
+00:22:05.150 --> 00:22:09.197
+Fontes consultadas mostra a cobertura, inclusive onde não há mensagens suas.
+
+00:22:09.197 --> 00:22:14.063
+Leitura completa, parcial, sem atividade, não conectada e só contexto são estados diferentes.
+
+00:22:14.063 --> 00:22:17.126
+O aplicativo separa humanos de automações e subagentes.
+
+00:22:17.126 --> 00:22:19.696
+WhatsApp depende de extração local validada.
+
+00:22:19.696 --> 00:22:22.813
+Registros de jogos comprovam partidas, não texto do chat.
+
+00:22:22.813 --> 00:22:28.227
+Todas as mensagens significa todas as detectadas nas fontes disponíveis, não tudo em qualquer aplicativo.
+
+00:22:28.227 --> 00:22:31.836
+Fontes ausentes não são fontes vazias: uma pode estar desconectada;
+
+00:22:31.836 --> 00:22:34.570
+a outra foi encontrada sem atividade naquele dia.
+
+00:22:35.608 --> 00:22:39.482
+A aba Revisar organiza aprendizados por projeto ou contexto e por assunto.
+
+00:22:39.482 --> 00:22:42.264
+Leia cada bloco antes de avançar para as perguntas.
+
+00:22:42.264 --> 00:22:45.428
+Clique numa alternativa do quiz para registrar a resposta.
+
+00:22:45.428 --> 00:22:50.229
+O aplicativo mostra acerto ou ponto a revisar, explica o motivo e revela a alternativa correta.
+
+00:22:50.229 --> 00:22:51.921
+A questão fica respondida;
+
+00:22:51.921 --> 00:22:54.812
+não há um botão para reiniciar o quiz nesta interface.
+
+00:22:54.812 --> 00:22:59.068
+Se a análise ainda não estiver completa, as interações permanecem indisponíveis.
+
+00:22:59.068 --> 00:23:02.668
+Dias sem conteúdo suficiente podem não gerar revisões ou perguntas.
+
+00:23:03.692 --> 00:23:06.736
+Em Perguntar, converse sobre os registros daquele dia.
+
+00:23:06.736 --> 00:23:11.275
+Você pode pedir uma explicação, investigar um bloqueio ou perguntar o que vale revisar.
+
+00:23:11.275 --> 00:23:14.928
+Escreva uma pergunta de até quatro mil caracteres e clique em Enviar.
+
+00:23:14.928 --> 00:23:19.412
+O histórico fica salvo com a data, e o modelo selecionado aparece associado à resposta.
+
+00:23:19.412 --> 00:23:21.792
+Aguarde enquanto ele relê as evidências.
+
+00:23:22.817 --> 00:23:28.403
+Detalhes da coleta mostra estado, atualização, contagens de conversas, mensagens humanas, respostas, eventos
+
+00:23:28.403 --> 00:23:30.605
+técnicos e tamanho do arquivo privado.
+
+00:23:30.605 --> 00:23:32.538
+Atualizar fontes refaz a coleta.
+
+00:23:32.538 --> 00:23:35.922
+Filtre conversas por fonte ou pesquise título, projeto e trecho.
+
+00:23:35.922 --> 00:23:40.219
+Abra uma conversa para ler sua prévia, diferente da lista integral de Suas mensagens.
+
+00:23:40.219 --> 00:23:42.206
+O arquivo local preserva o corpus;
+
+00:23:42.206 --> 00:23:45.751
+a análise utiliza o provedor configurado e não é totalmente offline.
+
+00:23:45.751 --> 00:23:48.597
+Se a coleta falhar, Tentar novamente refaz a leitura;
+
+00:23:48.597 --> 00:23:51.014
+ajuste uma fonte parcial antes de analisar.
+
+00:23:51.014 --> 00:23:54.667
+O caminho do arquivo é uma referência, sem botão de download nesta tela.
+
+00:23:55.692 --> 00:23:58.296
+Volte ao Diário e abra Revisar fechamento do dia.
+
+00:23:58.296 --> 00:24:01.432
+Confira concluídas, pendências e o contador sem evidência.
+
+00:24:01.432 --> 00:24:05.418
+A visão dos últimos sete dias mostra entregas, recorrências e links quebrados;
+
+00:24:05.418 --> 00:24:08.128
+as passagens de trabalho indicam próximos passos.
+
+00:24:08.128 --> 00:24:10.732
+Concluir uma frente não comprova seu resultado.
+
+00:24:10.732 --> 00:24:16.047
+Nesta versão, o registro manual da prova é feito no arquivo Markdown da tarefa, na pasta de dados configurada,
+
+00:24:16.047 --> 00:24:17.695
+em dias e na data escolhida.
+
+00:24:17.695 --> 00:24:22.318
+No cabeçalho entre os três traços, adicione evidencias, sem acento, seguido de dois-pontos.
+
+00:24:22.318 --> 00:24:26.304
+Abaixo, escreva cada referência com dois espaços, hífen e espaço, como na tela.
+
+00:24:26.304 --> 00:24:28.271
+Preserve os outros campos e salve.
+
+00:24:28.271 --> 00:24:31.832
+Texto no corpo ou uma edição pelo Agente comum não preenche essa lista.
+
+00:24:31.832 --> 00:24:34.117
+O executor automático pode registrá-la.
+
+00:24:34.117 --> 00:24:37.572
+Reabra o fechamento e confira se a conclusão aparece com evidência.
+
+00:24:38.608 --> 00:24:44.232
+Escolha separadamente onde cada informação deve ficar: fechamento no dia, memória dos projetos, aprendizados
+
+00:24:44.232 --> 00:24:47.071
+para revisão e resultados candidatos ao portfólio.
+
+00:24:47.071 --> 00:24:49.583
+Destinos sem conteúdo ficam indisponíveis.
+
+00:24:49.583 --> 00:24:53.896
+Confirmar fechamento grava apenas os destinos selecionados e apresenta um recibo.
+
+00:24:53.896 --> 00:24:56.736
+Isso não publica o site nem envia posts para as redes.
+
+00:24:56.736 --> 00:25:02.414
+Aprendizados e resultados candidatos ainda precisam de curadoria antes de entrar no conhecimento definitivo ou
+
+00:25:02.414 --> 00:25:03.834
+no material público.
+
+00:25:03.834 --> 00:25:06.728
+Se a confirmação falhar, leia o erro antes de repetir.
+
+00:25:06.728 --> 00:25:09.348
+Recolher o painel não confirma nenhum destino.
+
+00:25:10.358 --> 00:25:13.928
+Para começar outro dia, use a navegação de datas e confira o destino.
+
+00:25:13.928 --> 00:25:16.289
+O histórico anterior continua guardado.
+
+00:25:16.289 --> 00:25:19.364
+Preparar o dia recupera somente pendências relevantes.
+
+00:25:19.364 --> 00:25:23.483
+Você conhece o caminho: planejar, trabalhar, registrar, revisar e continuar.
+
+00:25:23.483 --> 00:25:28.645
+Use Principal para o que permanece, Lousas para explorar ideias e Diário para os próximos movimentos.
+
+00:25:28.645 --> 00:25:32.708
+Volte aos capítulos deste tutorial quando precisar reencontrar um controle.

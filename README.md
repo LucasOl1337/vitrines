@@ -4,6 +4,7 @@ Três perspectivas do trabalho: organizar o dia com o DailyWork, revisar projeto
 
 - [Coleção de vitrines](https://lucasol1337.github.io/vitrines/)
 - [DailyWork](https://lucasol1337.github.io/vitrines/dailywork/)
+- [Tutorial completo do DailyWork](https://lucasol1337.github.io/vitrines/dailywork/tutorial/) — 25min33s, 12 capítulos, transcrição e ajuda para começar.
 - [OL.GG](https://lucasol1337.github.io/vitrines/olgg/)
 - [LucasOL](https://lucasol1337.github.io/vitrines/lucasol/)
 
