@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14231d" />
+    <title>LucasOL — produtos, contexto e intenção</title>
+    <meta
+      name="description"
+      content="Conheça a nova apresentação do portfólio de Lucas Oliveira: produtos digitais, SaaS, automações e IA aplicada. Vídeo real, projetos e percursos de uso."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f4f4ef;
+        --ink: #19211f;
+        --muted: #59645c;
+        --dark: #14231d;
+        --blue: #2457e8;
+        --line: #d1d5cc;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Manrope, Arial, sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img,
+      video {
+        max-width: 100%;
+        display: block;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.05em;
+        font-weight: 600;
+      }
+      p {
+        line-height: 1.75;
+        color: var(--muted);
+      }
+      a:focus-visible,
+      video:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 5px;
+      }
+      .wrap {
+        max-width: 1240px;
+        margin: auto;
+        padding: 0 48px;
+      }
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.13em;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+      .header {
+        background: var(--dark);
+        color: white;
+      }
+      .header > .wrap {
+        height: 90px;
+        display: flex;
+        align-items: center;
+        gap: 36px;
+      }
+      .brand {
+        font-size: 33px;
+        letter-spacing: -0.08em;
+        font-weight: 800;
+      }
+      .brand span {
+        font-weight: 400;
+      }
+      .nav {
+        display: flex;
+        gap: 26px;
+        margin-left: auto;
+        font-size: 12px;
+      }
+      .nav a:hover {
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+      .hero {
+        padding-top: 72px;
+        padding-bottom: 55px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: end;
+        gap: 50px;
+      }
+      .hero h1 {
+        font-size: 67px;
+        line-height: 1.05;
+        margin: 22px 0;
+      }
+      .hero h1 span {
+        color: var(--blue);
+      }
+      .hero p {
+        font-size: 15px;
+      }
+      .hero-side {
+        max-width: 430px;
+        padding-bottom: 5px;
+      }
+      .button {
+        padding: 16px 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: var(--blue);
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 24px;
+      }
+      .button:hover {
+        background: #1743bc;
+      }
+      .video-shell {
+        background: var(--dark);
+        padding: 16px;
+        position: relative;
+      }
+      .video-shell video {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: var(--dark);
+      }
+      .video-note {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 15px 0;
+        font-size: 10px;
+        color: var(--muted);
+      }
+      .video-note a {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .preview-note {
+        border-left: 3px solid var(--blue);
+        padding: 13px 18px;
+        background: #e8ede3;
+        font-size: 11px;
+        margin: 16px 0 0;
+      }
+      .section {
+        padding-top: 76px;
+        padding-bottom: 76px;
+      }
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 40px;
+        margin-bottom: 34px;
+      }
+      .section-head h2 {
+        font-size: 40px;
+        line-height: 1.14;
+        margin-top: 15px;
+      }
+      .section-head p {
+        font-size: 13px;
+        max-width: 310px;
+      }
+      .pillars {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+      }
+      .pillar {
+        border-top: 2px solid var(--ink);
+        padding-top: 22px;
+      }
+      .pillar .num {
+        font-size: 11px;
+        font-weight: 800;
+        color: var(--blue);
+      }
+      .pillar h3 {
+        font-size: 25px;
+        line-height: 1.2;
+        margin-top: 25px;
+      }
+      .pillar p {
+        font-size: 13px;
+        margin-top: 15px;
+      }
+      .flow {
+        background: var(--dark);
+        color: #eef5e7;
+        padding: 56px 0;
+      }
+      .flow h2 {
+        font-size: 37px;
+        margin: 15px 0 30px;
+      }
+      .flow-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+      .flow-grid span {
+        color: #b9d999;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+      }
+      .flow-grid h3 {
+        font-size: 24px;
+        margin: 10px 0;
+      }
+      .flow-grid p {
+        font-size: 12px;
+        color: #b8c6b8;
+      }
+      .screen {
+        display: grid;
+        grid-template-columns: 1fr 1.65fr;
+        gap: 45px;
+        align-items: center;
+        margin-top: 65px;
+      }
+      .screen.reverse {
+        grid-template-columns: 1.65fr 1fr;
+      }
+      .screen.reverse .screen-copy {
+        order: 2;
+      }
+      .screen h3 {
+        font-size: 32px;
+        line-height: 1.18;
+        margin-top: 17px;
+      }
+      .screen p {
+        font-size: 13px;
+        margin-top: 20px;
+      }
+      .screen figure {
+        margin: 0;
+        padding: 13px;
+        background: #dfe5d5;
+      }
+      .screen:nth-child(3) figure {
+        background: #dce1ed;
+      }
+      .screen:nth-child(4) figure {
+        background: #d8e6ec;
+      }
+      .screen img {
+        width: 100%;
+        border: 1px solid #0001;
+      }
+      .screen figcaption {
+        font-size: 9px;
+        color: var(--muted);
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+      .facts {
+        background: #e3e7db;
+        padding: 50px 0;
+      }
+      .facts-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        margin-top: 28px;
+      }
+      .fact strong {
+        display: block;
+        font-size: 54px;
+        line-height: 1;
+        letter-spacing: -0.06em;
+        font-weight: 500;
+        color: var(--blue);
+      }
+      .fact span {
+        display: block;
+        font-size: 11px;
+        margin-top: 15px;
+      }
+      .fact-note {
+        font-size: 10px;
+        margin-top: 30px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 540px;
+        font-size: 12px;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 19px;
+        border-bottom: 1px solid var(--line);
+        line-height: 1.65;
+      }
+      thead {
+        background: var(--dark);
+        color: white;
+      }
+      th {
+        font-weight: 700;
+      }
+      tbody td:nth-child(3) {
+        background: #e7ecdf;
+      }
+      .source-note {
+        font-size: 10px;
+        margin-top: 20px;
+      }
+      .source-note a {
+        text-decoration: underline;
+      }
+      .access {
+        padding: 60px;
+        background: var(--dark);
+        color: #f4f8ed;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 50px;
+        margin-bottom: 70px;
+      }
+      .access h2 {
+        font-size: 38px;
+        line-height: 1.1;
+        margin-top: 18px;
+      }
+      .access p {
+        font-size: 13px;
+        color: #b8c6b8;
+      }
+      .access .button {
+        background: #d1e5a4;
+        color: var(--dark);
+      }
+      .access small {
+        display: block;
+        color: #b8c6b8;
+        font-size: 10px;
+        margin-top: 17px;
+        line-height: 1.65;
+      }
+      .footer {
+        border-top: 1px solid var(--line);
+        padding: 30px 0;
+      }
+      .footer > .wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 10px;
+      }
+      .footer a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+      .skip {
+        position: absolute;
+        top: -60px;
+        background: var(--blue);
+        color: white;
+        padding: 12px;
+      }
+      .skip:focus {
+        top: 10px;
+        z-index: 10;
+      }
+      @media (max-width: 800px) {
+        .wrap {
+          padding: 0 24px;
+        }
+        .header > .wrap {
+          height: 76px;
+          gap: 20px;
+        }
+        .nav {
+          gap: 18px;
+          font-size: 10px;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding-top: 45px;
+          padding-bottom: 35px;
+        }
+        .hero h1 {
+          font-size: 55px;
+        }
+        .hero-side {
+          max-width: 560px;
+        }
+        .hero p {
+          font-size: 14px;
+        }
+        .video-shell {
+          padding: 8px;
+        }
+        .video-note {
+          flex-wrap: wrap;
+          font-size: 9px;
+        }
+        .section {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        .section-head {
+          display: block;
+        }
+        .section-head h2 {
+          font-size: 34px;
+        }
+        .section-head p {
+          margin-top: 20px;
+          max-width: 500px;
+        }
+        .pillars {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .pillar {
+          display: grid;
+          grid-template-columns: 34px 1fr;
+          gap: 10px;
+        }
+        .pillar h3 {
+          margin-top: 0;
+          font-size: 24px;
+        }
+        .pillar p {
+          grid-column: 2;
+          margin-top: 0;
+        }
+        .flow-grid {
+          grid-template-columns: 1fr;
+          gap: 26px;
+        }
+        .flow h2 {
+          font-size: 32px;
+        }
+        .screen,
+        .screen.reverse {
+          grid-template-columns: 1fr;
+          gap: 22px;
+          margin-top: 45px;
+        }
+        .screen.reverse .screen-copy {
+          order: 0;
+        }
+        .screen h3 {
+          font-size: 29px;
+        }
+        .screen p {
+          margin-top: 14px;
+        }
+        .facts-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 35px;
+        }
+        .fact strong {
+          font-size: 46px;
+        }
+        .access {
+          margin: 0 24px 45px;
+          padding: 32px;
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        .access h2 {
+          font-size: 32px;
+        }
+        .footer > .wrap {
+          flex-wrap: wrap;
+        }
+        .nav a:nth-child(2) {
+          display: none;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  
+<meta data-vitrine-social="true" property="og:type" content="website">
+<meta property="og:title" content="LucasOL · O trabalho por trás do nome">
+<meta property="og:description" content="Uma apresentação de Lucas Oliveira, seus produtos, automações e experiências com IA.">
+<meta property="og:url" content="https://lucasol1337.github.io/vitrines/lucasol/">
+<meta property="og:image" content="https://lucasol1337.github.io/vitrines/lucasol/media/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://lucasol1337.github.io/vitrines/lucasol/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+</head>
+  <body>
+    <a class="skip" href="#main">Pular para o conteúdo</a>
+    <header class="header">
+      <div class="wrap">
+        <a href="../" class="brand" aria-label="Voltar à coleção de vitrines"
+          >OL<span>.CC</span></a
+        ><span class="eyebrow">LUCAS OLIVEIRA</span>
+        <nav class="nav" aria-label="Navegação">
+          <a href="#filme">O filme</a><a href="#telas">As telas</a
+          ><a href="#acesso">Conhecer ↗</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero wrap">
+        <div>
+          <span class="eyebrow">LUCASOL / PORTFÓLIO</span>
+          <h1>O trabalho<br />por trás<br /><span>do nome.</span></h1>
+        </div>
+        <div class="hero-side">
+          <p>
+            Produtos digitais, automações e IA aplicada. Uma apresentação de
+            Lucas Oliveira que começa pelo que ele constrói — e mostra o
+            contexto por trás de cada projeto.
+          </p>
+          <a href="#filme" class="button">Veja a experiência <span>↓</span></a>
+        </div>
+      </section>
+      <section class="wrap" id="filme" aria-label="Demonstração do portfólio">
+        <div class="video-shell">
+          <video
+            controls
+            preload="metadata"
+            playsinline
+            poster="media/poster.jpg"
+          >
+            <source src="media/demo-720p.mp4" type="video/mp4" />
+            <track
+              kind="captions"
+              srclang="pt-BR"
+              label="Português"
+              src="media/legendas.vtt"
+              default
+            />
+            Seu navegador não suporta vídeo HTML5.
+            <a href="media/demo-720p.mp4">Baixar demonstração</a>.
+          </video>
+        </div>
+        <div class="video-note">
+          <span>DEMONSTRAÇÃO REAL · NARRAÇÃO EM PORTUGUÊS · LEGENDAS</span
+          ><a href="media/demo-720p.mp4" download>Baixar vídeo em 720p ↗</a>
+        </div>
+        <p class="preview-note">
+          O vídeo e as capturas apresentam a nova versão do portfólio, gravada
+          em ambiente local. O domínio público pode exibir a versão anterior até
+          a publicação do redesign.
+        </p>
+      </section>
+      <section class="section wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">01 / UMA APRESENTAÇÃO COM INTENÇÃO</span>
+            <h2>Primeiro, o produto.<br />Depois, a profundidade.</h2>
+          </div>
+          <p>
+            Uma sequência simples para entender o trabalho, explorar os detalhes
+            e iniciar uma conversa.
+          </p>
+        </div>
+        <div class="pillars">
+          <article class="pillar">
+            <span class="num">01 /</span>
+            <h3>Identidade clara.</h3>
+            <p>
+              Nome humano, áreas de atuação e um produto real na abertura. O
+              visitante entende quem está por trás do trabalho.
+            </p>
+          </article>
+          <article class="pillar">
+            <span class="num">02 /</span>
+            <h3>Projetos com contexto.</h3>
+            <p>
+              Interfaces, tecnologias e descrições conectam o problema à
+              solução. Produtos, equipe e laboratório têm seu lugar.
+            </p>
+          </article>
+          <article class="pillar">
+            <span class="num">03 /</span>
+            <h3>Evidências com data.</h3>
+            <p>
+              Cada indicador aparece junto de seu registro original. Sem
+              transformar volume de atividade em desempenho profissional.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="flow">
+        <div class="wrap">
+          <span class="eyebrow">02 / COMO EXPLORAR</span>
+          <h2>Um caminho até a conversa.</h2>
+          <div class="flow-grid">
+            <article>
+              <span>PASSO 01</span>
+              <h3>Encontre um projeto.</h3>
+              <p>
+                Explore os destaques ou busque por nome, contexto e tecnologia
+                no catálogo.
+              </p>
+            </article>
+            <article>
+              <span>PASSO 02</span>
+              <h3>Abra o case.</h3>
+              <p>
+                Conheça a intenção, veja as telas e leia as evidências que estão
+                disponíveis.
+              </p>
+            </article>
+            <article>
+              <span>PASSO 03</span>
+              <h3>Continue a conversa.</h3>
+              <p>
+                Abra o GitHub para conhecer o código ou o LinkedIn para entrar
+                em contato.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section wrap" id="telas">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">03 / UM TOUR PELAS TELAS</span>
+            <h2>Da primeira impressão<br />ao próximo passo.</h2>
+          </div>
+          <p>
+            Capturas da aplicação funcionando. Navegação, conteúdo e resultados
+            pertencem ao próprio portfólio.
+          </p>
+        </div>
+        <article class="screen">
+          <div class="screen-copy">
+            <span class="eyebrow">INÍCIO</span>
+            <h3>Lucas, o trabalho<br />e uma direção.</h3>
+            <p>
+              A abertura conecta nome, atuação e um case real do NexARQ. O
+              próximo passo é explícito: explorar os projetos.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="media/inicio.png"
+              alt="Home do novo LucasOL, com apresentação de Lucas Oliveira e imagem real do NexARQ"
+              loading="lazy"
+            />
+            <figcaption>
+              Identidade e produto juntos na primeira tela.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="screen reverse">
+          <div class="screen-copy">
+            <span class="eyebrow">TRABALHOS SELECIONADOS</span>
+            <h3>O produto<br />ganha espaço.</h3>
+            <p>
+              NexARQ, LojaSync, Simple AI e The Last Arrow mostram diferentes
+              frentes. As imagens distinguem interfaces reais de materiais do
+              laboratório de jogos.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="media/selecionados.png"
+              alt="Projetos NexARQ e LojaSync em destaque, com capturas de suas interfaces"
+              loading="lazy"
+            />
+            <figcaption>
+              Quatro destaques selecionados do catálogo público.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="screen">
+          <div class="screen-copy">
+            <span class="eyebrow">CATÁLOGO</span>
+            <h3>Explore pelo<br />que interessa.</h3>
+            <p>
+              Busca e categorias trabalham juntas. A contagem acompanha o
+              resultado, os filtros podem ser limpos e a URL preserva o
+              contexto.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="media/projetos.png"
+              alt="Catálogo do LucasOL com categorias, busca por nome ou tecnologia e projetos"
+              loading="lazy"
+            />
+            <figcaption>Produtos, trabalho em equipe e laboratório.</figcaption>
+          </figure>
+        </article>
+        <article class="screen reverse">
+          <div class="screen-copy">
+            <span class="eyebrow">CASE DE PROJETO</span>
+            <h3>Mais que<br />uma miniatura.</h3>
+            <p>
+              Contexto, solução, tecnologias e evidências datadas. Cada projeto
+              tem um endereço próprio para compartilhar e um caminho de volta
+              aos resultados.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="media/case.png"
+              alt="Case NexARQ com título, tecnologias, acesso ao produto e captura da aplicação"
+              loading="lazy"
+            />
+            <figcaption>O case conecta apresentação e profundidade.</figcaption>
+          </figure>
+        </article>
+        <article class="screen">
+          <div class="screen-copy">
+            <span class="eyebrow">SOBRE</span>
+            <h3>A ferramenta muda.<br />O critério fica.</h3>
+            <p>
+              Uma apresentação do modo de trabalhar: entender antes de
+              construir, dar forma à solução e revisar a experiência no uso.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="media/sobre.png"
+              alt="Seção sobre Lucas Oliveira, com sua identidade e descrição do modo de trabalhar"
+              loading="lazy"
+            />
+            <figcaption>
+              Identidade humana e processo em linguagem direta.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="screen reverse">
+          <div class="screen-copy">
+            <span class="eyebrow">CONTATO</span>
+            <h3>Sem adivinhar<br />o próximo passo.</h3>
+            <p>
+              Dois destinos claros: conversar no LinkedIn e explorar o código no
+              GitHub, pelos perfis já públicos de Lucas.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="media/contato.png"
+              alt="Tela de contato com botões para conversar no LinkedIn e explorar o GitHub"
+              loading="lazy"
+            />
+            <figcaption>
+              Contato acessível pela navegação e pelo fechamento dos percursos.
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="facts">
+        <div class="wrap">
+          <span class="eyebrow">04 / A EXPERIÊNCIA EM NÚMEROS</span>
+          <div class="facts-grid">
+            <div class="fact">
+              <strong>14</strong><span>projetos no catálogo</span>
+            </div>
+            <div class="fact">
+              <strong>4</strong><span>trabalhos em destaque</span>
+            </div>
+            <div class="fact">
+              <strong>3</strong><span>categorias de exploração</span>
+            </div>
+            <div class="fact">
+              <strong>4</strong><span>larguras verificadas</span>
+            </div>
+          </div>
+          <p class="fact-note">
+            Contagens e verificação desta versão em 7 de setembro de 2026.
+            Layouts testados em 360, 390, 768 e 1440 px. Indicadores dos
+            projetos têm sua própria data nos cases.
+          </p>
+        </div>
+      </section>
+      <section class="section wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">05 / O QUE MUDOU</span>
+            <h2>Uma lógica de portfólio.</h2>
+          </div>
+          <p>
+            Comparação com a versão anterior, inspecionada em 7 de setembro de
+            2026.
+          </p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Percurso</th>
+                <th scope="col">Versão anterior</th>
+                <th scope="col">Nova apresentação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Primeira impressão</th>
+                <td>Avatar de ferramenta, score e atividade</td>
+                <td>Lucas Oliveira, áreas de trabalho e produto real</td>
+              </tr>
+              <tr>
+                <th scope="row">Explorar o trabalho</th>
+                <td>Cards agrupados, sem case navegável</td>
+                <td>Busca, categorias e páginas de projeto</td>
+              </tr>
+              <tr>
+                <th scope="row">Compartilhar</th>
+                <td>Troca de seção em estado local</td>
+                <td>Seção, busca, filtro e case representados na URL</td>
+              </tr>
+              <tr>
+                <th scope="row">Entender resultados</th>
+                <td>Indicadores distantes do contexto</td>
+                <td>Evidências por projeto, com data original</td>
+              </tr>
+              <tr>
+                <th scope="row">Próximo passo</th>
+                <td>Contato disperso</td>
+                <td>LinkedIn e GitHub em percursos explícitos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source-note">
+          Fonte:
+          <a
+            href="https://github.com/LucasOl1337/DailyWork/blob/main/LucasOL%20site/docs/redesign-2026-09-07.md"
+            >análise local, código e evidências do redesign</a
+          >. Conteúdo dos projetos baseado no catálogo público e no recorte de
+          13 de agosto de 2026.
+        </p>
+      </section>
+      <section class="access wrap" id="acesso">
+        <div>
+          <span class="eyebrow">06 / ACESSO</span>
+          <h2>Um portfólio.<br />Aberto no navegador.</h2>
+        </div>
+        <div>
+          <p>
+            Conheça o endereço público de Lucas Oliveira. A nova experiência
+            mostrada nesta vitrine aguarda publicação no domínio.
+          </p>
+          <a
+            href="https://lucasol.cc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+            >Abrir portfólio público <span>↗</span></a
+          ><small
+            >Não é necessário instalar um aplicativo. O link abre uma nova
+            aba.</small
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <span>OL.CC / LUCAS OLIVEIRA · 2026</span
+        ><a href="../">Voltar à coleção de vitrines ↗</a
+        ><a
+          href="https://github.com/LucasOl1337"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub de Lucas ↗</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
