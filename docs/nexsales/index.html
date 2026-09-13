@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NexSales — A IA que atende, qualifica e agenda pelo WhatsApp</title>
+<meta name="description" content="O NexSales conversa com seus clientes no WhatsApp: responde na hora, qualifica, agenda na sua agenda e transfere para a equipe com contexto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1235; --violet:#5B3DF5; --violet-h:#4E32DC; --lilac:#9B8CFF;
+  --cream:#FAFAFA; --bg-dark:#0B0618; --bg-grad:linear-gradient(180deg,#1B1235 0%,#2A1B5C 100%);
+  --fg2:rgba(250,250,250,.72); --fg3:rgba(250,250,250,.45);
+  --ink2:rgba(27,18,53,.65); --ink3:rgba(27,18,53,.45);
+  --border:rgba(27,18,53,.08); --border-d:rgba(250,250,250,.10);
+  --pill:#EEEAFE;
+}
+*{margin:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Raleway,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+.serif{font-family:"Playfair Display",serif;font-style:italic}
+section{padding:88px 24px}
+.wrap{max-width:1140px;margin:0 auto}
+.kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+h2{font-size:clamp(30px,4vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin-top:14px}
+.sub{font-size:18px;margin-top:16px;max-width:60ch}
+
+/* hero */
+.hero{background:var(--bg-grad);color:var(--cream);text-align:center;padding:120px 24px 90px;position:relative;overflow:hidden}
+.hero .glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(91,61,245,.30),transparent 65%);top:-320px;right:-220px;pointer-events:none}
+.pill{display:inline-block;border:1px solid rgba(155,140,255,.45);color:#C9BCFF;padding:8px 22px;border-radius:999px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.hero h1{font-size:clamp(40px,6vw,74px);font-weight:700;letter-spacing:-.02em;line-height:1.1;max-width:16ch;margin:34px auto 0}
+.hero h1 .serif{background:linear-gradient(135deg,#9B8CFF,#5B3DF5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:26px auto 0;max-width:56ch;font-size:19px;color:var(--fg2)}
+.btns{margin-top:40px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 34px;border-radius:14px;font-weight:600;font-size:16px;text-decoration:none;transition:background .2s,transform .15s}
+.btn:active{transform:scale(.98)}
+.btn-light{background:var(--cream);color:var(--ink)}
+.btn-light:hover{background:#fff}
+.btn-ghost{border:1px solid var(--border-d);color:var(--cream)}
+.btn-ghost:hover{border-color:rgba(250,250,250,.3)}
+.micro{margin-top:18px;font-size:13px;color:var(--fg3)}
+.video-wrap{max-width:980px;margin:56px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--border-d);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+video{display:block;width:100%;background:#000}
+.caption{font-size:13px;color:var(--fg3);margin-top:14px}
+
+/* numbers */
+.nums{background:var(--bg-dark);color:var(--cream);padding:56px 24px}
+.nums .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px}
+.num b{display:block;font-size:38px;font-weight:700;color:var(--lilac)}
+.num span{font-size:14px;color:var(--fg2)}
+.nums .foot{max-width:1140px;margin:30px auto 0;font-size:12px;color:var(--fg3)}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:52px}
+.pillar{background:#fff;border:1px solid var(--border);border-radius:18px;padding:32px}
+.pillar .ic{width:46px;height:46px;border-radius:12px;background:var(--pill);display:flex;align-items:center;justify-content:center;font-size:22px}
+.pillar h3{font-size:19px;font-weight:700;margin-top:20px}
+.pillar p{font-size:15px;color:var(--ink2);margin-top:10px}
+
+/* steps */
+.steps{background:var(--bg-grad);color:var(--cream)}
+.steps .sub{color:var(--fg2)}
+.steps ol{margin-top:52px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;list-style:none;padding:0;counter-reset:s}
+.steps li{background:rgba(250,250,250,.05);border:1px solid var(--border-d);border-radius:18px;padding:30px;counter-increment:s}
+.steps li::before{content:"0" counter(s);display:inline-block;font-family:"Playfair Display",serif;font-style:italic;font-size:30px;color:var(--lilac)}
+.steps li h3{font-size:18px;font-weight:700;margin-top:14px}
+.steps li p{font-size:15px;color:var(--fg2);margin-top:8px}
+
+/* screens */
+.screens .row{display:grid;grid-template-columns:1fr 1.35fr;gap:56px;align-items:center;margin-top:72px}
+.screens .row:nth-child(even){direction:rtl}
+.screens .row>*{direction:ltr}
+.screens img{width:100%;border-radius:14px;border:1px solid var(--border);box-shadow:0 24px 60px -24px rgba(27,18,53,.35)}
+.screens h3{font-size:26px;font-weight:700;letter-spacing:-.01em}
+.screens h3 .tag{display:inline-block;vertical-align:middle;margin-left:10px;font-family:Raleway;font-style:normal;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--pill);color:var(--violet);padding:5px 12px;border-radius:999px}
+.screens p{margin-top:14px;font-size:16px;color:var(--ink2)}
+.screens ul{margin-top:16px;padding-left:20px;font-size:15px;color:var(--ink2)}
+.screens li{margin-top:6px}
+@media(max-width:860px){.screens .row{grid-template-columns:1fr;gap:26px}}
+
+/* compare */
+.compare table{width:100%;border-collapse:collapse;margin-top:48px;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--border);font-size:15px}
+.compare th,.compare td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--border)}
+.compare th{background:var(--ink);color:var(--cream);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.compare td:first-child{font-weight:600}
+.compare tr:last-child td{border-bottom:none}
+.ok{color:var(--violet);font-weight:700}
+.no{color:var(--ink3)}
+.compare .src{margin-top:14px;font-size:12px;color:var(--ink3)}
+
+/* install / cta */
+.install{background:var(--bg-grad);color:var(--cream)}
+.install .sub{color:var(--fg2)}
+.install .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:48px}
+.install .card{background:rgba(250,250,250,.05);border:1px solid var(--border-d);border-radius:18px;padding:28px}
+.install .card b{display:block;font-size:17px}
+.install .card p{font-size:14.5px;color:var(--fg2);margin-top:8px}
+.install .btns{justify-content:flex-start}
+
+footer{background:var(--bg-dark);color:var(--fg3);padding:44px 24px;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--fg2);text-decoration:none}
+footer a:hover{color:var(--cream)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="glow"></div>
+  <span class="pill">NexSales · IA de atendimento no WhatsApp</span>
+  <h1>Sua empresa atendendo, <span class="serif">mesmo quando ninguém está online.</span></h1>
+  <p>O NexSales conversa com seus clientes como alguém da equipe: responde na hora, entende o que precisam, marca o horário na agenda e passa para uma pessoa quando importa.</p>
+  <div class="btns">
+    <a class="btn btn-light" href="mailto:contato@nexunio.com.br?subject=Quero%20conhecer%20o%20NexSales">Falar com a NexUnio →</a>
+    <a class="btn btn-ghost" href="#telas">Ver o produto</a>
+  </div>
+  <p class="micro">Implantação acompanhada pela equipe NexUnio.</p>
+  <div class="video-wrap">
+    <video controls preload="metadata" poster="media/poster.jpg" src="media/demo-720p.mp4"><track kind="captions" label="Português" srclang="pt-BR" src="media/legendas.vtt" default></video>
+  </div>
+  <p class="caption">Demonstração real do app · 76s · narrado · cenário de demonstração “Studio Lumina”</p>
+</header>
+
+<section class="nums">
+  <div class="wrap">
+    <div class="num"><b>R$ 2.890</b><span>valor fechado no período registrado no funil</span></div>
+    <div class="num"><b>5min 0s</b><span>mediana de resposta da IA</span></div>
+    <div class="num"><b>10</b><span>conversas atendidas pela IA</span></div>
+    <div class="num"><b>18</b><span>mensagens enviadas pela IA</span></div>
+  </div>
+  <p class="foot">Números medidos no painel do próprio NexSales durante a gravação da demonstração (tenant fictício Studio Lumina, set/2026).</p>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker" style="color:var(--violet)">O que é</span>
+    <h2>Do primeiro “oi” no WhatsApp<br>até o <span class="serif" style="color:var(--violet)">horário marcado</span></h2>
+    <div class="pillars">
+      <div class="pillar"><div class="ic">💬</div><h3>Atendimento que não parece robô</h3><p>A IA conversa como gente: entende o pedido, coleta o que falta e responde na hora — de dia, de noite, no fim de semana.</p></div>
+      <div class="pillar"><div class="ic">📅</div><h3>Da conversa direto para a agenda</h3><p>O agendamento sai do chat: a IA reserva o horário no profissional certo, respeitando a grade de cada recurso.</p></div>
+      <div class="pillar"><div class="ic">🤝</div><h3>A IA sabe a hora de chamar você</h3><p>Quando a conversa precisa de gente, ela entra na fila “sem resposta” e chega para a equipe com o contexto inteiro.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--lilac)">Como funciona</span>
+    <h2>Três passos e sua empresa<br>está <span class="serif" style="color:var(--lilac)">atendendo</span></h2>
+    <ol>
+      <li><h3>Conecte seu WhatsApp</h3><p>O número da empresa vira o canal de atendimento. O cliente fala no WhatsApp de sempre; nada de app novo para ele.</p></li>
+      <li><h3>Configure sua IA</h3><p>Catálogo, serviços, agenda e tom de voz. A IA aprende o seu negócio e passa a atender com as suas regras.</p></li>
+      <li><h3>Receba leads qualificados</h3><p>Cada conversa vira um negócio no funil, com agendamento feito e histórico completo para a equipe assumir.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="screens" id="telas">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--violet)">O produto por dentro</span>
+    <h2>Cada tela fazendo <span class="serif" style="color:var(--violet)">o trabalho</span></h2>
+    <p class="sub" style="color:var(--ink2)">Capturas reais do aplicativo em execução, gravadas na demonstração acima.</p>
+
+    <div class="row">
+      <div>
+        <h3>Conversas <span class="tag">IA + equipe</span></h3>
+        <p>O inbox onde a IA e as pessoas atendem juntas. Bolhas diferenciadas mostram quem falou: cliente, IA ou equipe.</p>
+        <ul><li>Fila “sem resposta” para o que precisa de humano</li><li>Transferência com o contexto inteiro da conversa</li><li>Respostas prontas e mensagem privada entre o time</li></ul>
+      </div>
+      <img src="media/tela-conversas.jpg" alt="Inbox de conversas do NexSales mostrando conversa com cliente, resposta da IA e banner de cliente sem resposta" loading="lazy">
+    </div>
+
+    <div class="row">
+      <div>
+        <h3>CRM <span class="tag">Funil</span></h3>
+        <p>Cada conversa vira um negócio no kanban. Novos, em atendimento, agendados, fechados — com valor no card e motivo de perda registrado.</p>
+        <ul><li>Arrastar e soltar entre etapas</li><li>Valor do pipeline e etiquetas por lead</li><li>Origem e responsável visíveis no card</li></ul>
+      </div>
+      <img src="media/tela-crm.jpg" alt="Kanban do CRM do NexSales com leads distribuídos nas etapas do funil" loading="lazy">
+    </div>
+
+    <div class="row">
+      <div>
+        <h3>Agenda <span class="tag">Recursos</span></h3>
+        <p>Grade por profissional e por sala, com horários livres e ocupados lado a lado. A IA só oferece o que realmente está livre.</p>
+        <ul><li>Visão dia e semana por recurso</li><li>Status do compromisso: agendado, confirmado, concluído</li><li>Agendamento criado direto da conversa</li></ul>
+      </div>
+      <img src="media/tela-agenda.jpg" alt="Agenda semanal do NexSales com grade de horários por profissional e sala" loading="lazy">
+    </div>
+
+    <div class="row">
+      <div>
+        <h3>Contatos <span class="tag">Base</span></h3>
+        <p>Todo lead que chega vira contato organizado: telefone, etapa do funil, status da IA e quando foi a última mensagem.</p>
+        <ul><li>Busca por nome, telefone ou e-mail</li><li>Filtros por etapa, status, operador e período</li><li>Exportação para CSV</li></ul>
+      </div>
+      <img src="media/tela-contatos.jpg" alt="Lista de contatos do NexSales com etapa do funil, status da IA e última mensagem" loading="lazy">
+    </div>
+
+    <div class="row">
+      <div>
+        <h3>Dashboard <span class="tag">Números</span></h3>
+        <p>O painel do dono: valor fechado no período, mediana de resposta da IA, conversas atendidas e quem está esperando na fila agora.</p>
+        <ul><li>Alertas do que precisa de atenção</li><li>SLA de resposta da IA e da equipe</li><li>Funil, retorno e follow-up no mesmo lugar</li></ul>
+      </div>
+      <img src="media/tela-dashboard.jpg" alt="Dashboard do NexSales com valor fechado, mediana de resposta da IA e alertas de fila" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--violet)">Comparação</span>
+    <h2>Com o NexSales vs. <span class="serif" style="color:var(--violet)">do jeito manual</span></h2>
+    <table>
+      <tr><th></th><th>NexSales</th><th>WhatsApp manual</th><th>Planilha + telefone</th></tr>
+      <tr><td>Responde cliente à noite e no fim de semana</td><td class="ok">Sim, pela IA</td><td class="no">Não</td><td class="no">Não</td></tr>
+      <tr><td>Agenda o horário dentro da conversa</td><td class="ok">Sim, respeitando cada recurso</td><td class="no">Manual, vai-e-volta de mensagens</td><td class="no">Ligação ou troca de mensagens</td></tr>
+      <tr><td>Funil de vendas ligado às conversas</td><td class="ok">Automático, um card por lead</td><td class="no">Não existe</td><td class="no">Planilha separada, desatualizada</td></tr>
+      <tr><td>Equipe assume com contexto completo</td><td class="ok">Sim, histórico na mesma tela</td><td class="no">Depende de quem pegou o celular</td><td class="no">Contexto se perde</td></tr>
+      <tr><td>Métricas de atendimento (tempo de resposta, fila, fechado)</td><td class="ok">Painel em tempo real</td><td class="no">Não</td><td class="no">Não</td></tr>
+    </table>
+    <p class="src">Recursos verificados no próprio app (telas e vídeo acima) e no repositório do produto — set/2026.</p>
+  </div>
+</section>
+
+<section class="install">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--lilac)">Como começar</span>
+    <h2>Implantação acompanhada,<br><span class="serif" style="color:var(--lilac)">sem obra</span></h2>
+    <p class="sub">O NexSales é SaaS: nada para instalar no seu computador. A equipe NexUnio conduz a configuração com você.</p>
+    <div class="grid">
+      <div class="card"><b>1 · Conversa inicial</b><p>Você conta como atende hoje. A NexUnio desenha o fluxo da sua IA: o que ela responde, qualifica e agenda.</p></div>
+      <div class="card"><b>2 · Conexão do WhatsApp</b><p>O número da empresa é conectado à plataforma. Seus clientes continuam falando no mesmo lugar.</p></div>
+      <div class="card"><b>3 · Catálogo e agenda</b><p>Serviços, preços, profissionais e horários entram no sistema — é o que a IA usa para responder e marcar.</p></div>
+      <div class="card"><b>4 · No ar</b><p>A IA começa a atender. Sua equipe acompanha tudo pelo painel e assume as conversas que importam.</p></div>
+    </div>
+    <div class="btns" style="margin-top:44px">
+      <a class="btn btn-light" href="mailto:contato@nexunio.com.br?subject=Quero%20conhecer%20o%20NexSales">Falar com a NexUnio →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><strong style="color:var(--cream)">NexSales</strong> · produto da NexUnio</span>
+    <span>Demonstração gravada em set/2026 com dados fictícios (Studio Lumina).</span>
+    <a href="mailto:contato@nexunio.com.br">contato@nexunio.com.br</a>
+  </div>
+</footer>
+
+</body>
+</html>
