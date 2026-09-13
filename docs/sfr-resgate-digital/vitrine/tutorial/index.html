@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000640">
+  <meta name="description" content="Treinamento do SFR Resgate Digital. Consulte os capítulos do app de campo e do painel, acompanhe o vídeo e leia a transcrição.">
+  <title>Treinamento · SFR Resgate Digital</title>
+  <style>
+    @font-face{font-family:Encode;src:url(assets/encode-sans-expanded-400.woff2) format('woff2');font-weight:400;font-display:swap}
+    @font-face{font-family:Encode;src:url(assets/encode-sans-expanded-600.woff2) format('woff2');font-weight:600;font-display:swap}
+    @font-face{font-family:Encode;src:url(assets/encode-sans-expanded-800.woff2) format('woff2');font-weight:800;font-display:swap}
+    :root{--navy:#000640;--deep:#000420;--gold:#f6c92e;--blue:#3828d8;--ink:#192132;--muted:#586174;--line:#e0e4ed;--surface:#f5f7fa;--soft:#eeedfc;--font:Encode,system-ui,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:25px}body{margin:0;background:var(--surface);color:var(--ink);font:400 13px/1.7 var(--font);-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button,a,select,input,video{outline-offset:4px}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible,video:focus-visible{outline:3px solid var(--blue)}a{color:inherit}button{cursor:pointer}button:disabled{cursor:default}button:disabled,select:disabled{opacity:.5}h1,h2,h3,p{margin:0}h1,h2,h3{color:var(--navy);line-height:1.3;letter-spacing:-.045em}h1{font-size:clamp(28px,3.4vw,44px);font-weight:800}h2{font-size:23px}h3{font-size:18px}svg{display:block;flex-shrink:0}button{border:0}a{text-underline-offset:4px}[hidden]{display:none!important}.wrap{width:min(1360px,calc(100% - 72px));margin:auto}.skip{position:fixed;top:-100px;left:20px;z-index:10;background:var(--gold);padding:12px 18px;border-radius:5px}.skip:focus{top:12px}
+    .top{background:var(--navy);border-top:4px solid var(--gold);color:#fff}.top .wrap{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:block;line-height:0}.brand img{width:170px;height:auto}.top-label{display:flex;align-items:center;gap:13px;color:#b5bcdf;font-size:10px}.top-label:before{content:'';height:20px;width:1px;background:#3b4371}.top-left{display:flex;align-items:center;gap:25px}.back-link{font-size:10px;text-decoration:none;color:#d7dbef;display:flex;gap:9px;align-items:center}.back-link:hover{color:var(--gold)}
+    .intro{padding:36px 0 28px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}.eyebrow{color:var(--blue);font-size:9px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;display:block;margin-bottom:10px}.intro p{color:var(--muted);font-size:12px;margin-top:10px;max-width:630px}.course-meta{display:flex;gap:20px;align-items:center;padding-bottom:3px;white-space:nowrap;color:var(--muted);font-size:10px}.course-meta strong{font-size:25px;font-weight:600;line-height:1;color:var(--navy)}.course-meta span{display:block;margin-top:7px}.meta-count{border-right:1px solid #d1d6e0;padding-right:22px}.meta-kind{line-height:2}
+    .course{display:grid;grid-template-columns:minmax(0,1fr) 365px;align-items:start;gap:25px;padding-bottom:50px}.watch{min-width:0}.stage{position:relative;background:var(--deep);border-radius:12px 12px 0 0;overflow:hidden;aspect-ratio:16/9;border:1px solid #111949}.stage video{width:100%;height:100%;display:block;object-fit:contain;background:var(--deep)}.video-pending{position:absolute;inset:0;padding:40px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;background:radial-gradient(ellipse at 50% 95%,#1c2261 0%,var(--deep) 68%)}.video-pending:before,.video-pending:after{content:'';position:absolute;pointer-events:none;width:78%;aspect-ratio:1;border:1px solid #303561;border-radius:50%;left:11%;top:20%}.video-pending:after{width:98%;left:1%;top:3%;border-color:#1d244f}.pending-inner{position:relative;z-index:1;max-width:460px}.play-mark{width:65px;height:65px;margin:0 auto 22px;border:1px solid #75799a;border-radius:50%;display:grid;place-items:center;background:#ffffff08}.play-mark svg{width:20px;height:24px;fill:var(--gold);margin-left:4px}.pending-kicker{font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:12px}.video-pending h2{font-size:clamp(19px,2.5vw,30px);color:white}.video-pending p{font-size:11px;line-height:1.9;color:#bfc5e0;margin-top:14px}.video-pending .pending-tag{display:inline-flex;font-size:8px;border:1px solid #3c426f;border-radius:99px;padding:5px 11px;color:#bcc3df;margin-top:23px}
+    .tools{min-height:65px;background:white;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 18px}.transport{display:flex;align-items:center;gap:8px}.icon-button{width:35px;height:35px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--navy);display:grid;place-items:center;font:600 11px system-ui}.icon-button:hover:not(:disabled){background:var(--soft)}.clock{font:600 11px ui-monospace,SFMono-Regular,monospace;color:var(--muted);padding-left:7px;white-space:nowrap}.speed{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--muted)}.speed select{background:white;border:1px solid var(--line);border-radius:5px;min-height:35px;padding:4px 8px;color:var(--navy);font-size:11px}.playback-status{font-size:9px;color:var(--muted);margin:11px 2px 23px;min-height:16px}
+    .chapter-detail{background:white;border:1px solid var(--line);border-radius:12px;padding:27px 28px}.detail-heading{display:flex;align-items:start;justify-content:space-between;gap:25px}.detail-heading .eyebrow{font-size:8px;margin-bottom:10px}.detail-heading h2{font-size:21px;max-width:630px}.chapter-position{flex-shrink:0;font-size:9px;color:var(--muted);padding-top:3px}.chapter-description{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:20px}.primary{min-height:40px;padding:10px 15px;border-radius:6px;background:var(--navy);color:white;font-size:10px;font-weight:600;display:inline-flex;gap:11px;align-items:center}.primary:hover:not(:disabled){background:var(--blue)}.timestamp-note{font-size:9px;color:var(--muted)}.transcript{margin-top:26px;border-top:1px solid var(--line);padding-top:22px}.transcript summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:11px;font-weight:600;color:var(--navy);list-style:none;min-height:30px}.transcript summary::-webkit-details-marker{display:none}.transcript summary:after{content:'+';font:400 20px system-ui}.transcript[open] summary:after{content:'−'}.transcript-content{padding:19px 0 0;max-width:720px;color:#465163;font-size:12px;line-height:1.95}.transcript-content p+p{margin-top:18px}.chapter-nav{display:flex;justify-content:space-between;gap:18px;margin-top:27px;border-top:1px solid var(--line);padding-top:17px}.chapter-nav button{font-size:10px;color:var(--navy);background:transparent;padding:7px 0;display:flex;gap:9px;align-items:center}.chapter-nav button:hover:not(:disabled){color:var(--blue)}
+    .downloads{margin-top:23px;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:0 3px}.downloads h3{font-size:12px;font-weight:600;letter-spacing:-.02em}.downloads p{font-size:9px;color:var(--muted);margin-top:4px}.download-actions{display:flex;gap:8px;flex-shrink:0}.download{font-size:9px;font-weight:600;border:1px solid #d8dce6;border-radius:6px;padding:9px 11px;text-decoration:none;background:white;color:var(--navy);display:flex;gap:8px;align-items:center}.download:hover{border-color:var(--blue);color:var(--blue)}.download.unavailable{color:#8a91a0;background:transparent;cursor:default}.download.unavailable:hover{border-color:#d8dce6;color:#8a91a0}
+    .index{position:sticky;top:20px;border:1px solid var(--line);background:white;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;max-height:calc(100vh - 40px)}.index-head{padding:23px 21px 16px;border-bottom:1px solid var(--line)}.index-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.index-title h2{font-size:15px;letter-spacing:-.03em}.index-title span{font:600 10px system-ui;color:var(--muted);border:1px solid var(--line);border-radius:20px;min-width:27px;text-align:center;padding:2px 6px}.search-wrap{position:relative}.search-wrap svg{position:absolute;top:13px;left:12px;color:#757f90;width:15px;height:15px}.search{width:100%;min-height:42px;border:1px solid #d9dfe9;background:#f9fafc;border-radius:6px;padding:10px 32px 10px 34px;color:var(--navy);font-size:10px}.clear-search{position:absolute;right:7px;top:8px;background:transparent;color:var(--muted);width:25px;height:25px;font-size:17px}.filters{display:flex;gap:6px;margin-top:12px}.filters button{font-size:9px;padding:6px 9px;border-radius:5px;background:white;color:var(--muted);border:1px solid var(--line);min-height:31px}.filters button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:white}.index-count{font-size:8px;color:var(--muted);margin-top:11px;min-height:14px}.chapter-list{overflow-y:auto;overscroll-behavior:contain;padding:9px 9px 14px;scrollbar-width:thin;scrollbar-color:#c9ccda transparent}.group-title{padding:14px 11px 10px;color:#6c7485;text-transform:uppercase;letter-spacing:.12em;font-size:8px;font-weight:600}.chapter-row{display:flex;width:100%;text-align:left;align-items:start;gap:12px;padding:13px 11px;background:white;border-radius:7px;color:var(--ink);border:1px solid transparent;margin:2px 0}.chapter-row:hover{background:#f6f7fc}.chapter-row[aria-pressed=true]{background:var(--soft);border-color:#dcdbf6}.chapter-number{font:600 10px ui-monospace,monospace;color:#7a8292;min-width:18px;padding-top:2px}.chapter-row[aria-pressed=true] .chapter-number{color:var(--blue)}.chapter-row-body{min-width:0;flex:1}.chapter-row-title{font-size:10px;font-weight:600;line-height:1.6;display:block}.chapter-row[aria-pressed=true] .chapter-row-title{color:var(--blue)}.chapter-row-time{font:400 9px ui-monospace,monospace;color:#778095;display:block;margin-top:6px}.chapter-row-time.pending{font:400 8px var(--font)}.current-mark{width:4px;height:14px;border-radius:4px;background:var(--blue);margin-top:3px;visibility:hidden}.chapter-row[aria-pressed=true] .current-mark{visibility:visible}.empty{padding:27px 13px;text-align:center;font-size:11px;color:var(--muted)}.empty strong{display:block;color:var(--navy);margin-bottom:8px}.index-foot{border-top:1px solid var(--line);padding:11px 19px;color:var(--muted);font-size:8px;background:#fbfcfe}
+    .foot{border-top:1px solid var(--line);padding:23px 0 30px}.foot .wrap{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:9px}.foot a{text-decoration:none}.foot a:hover{color:var(--blue)}.noscript{background:#fff3cb;padding:20px;color:var(--navy)}
+    @media(min-width:1600px){.wrap{width:min(1500px,calc(100% - 100px))}.course{grid-template-columns:minmax(0,1fr) 390px}.chapter-row-title{font-size:11px}}
+    @media(max-width:1050px){.wrap{width:calc(100% - 40px)}.course{grid-template-columns:minmax(0,1fr) 310px;gap:18px}.intro{gap:20px}.course-meta{gap:14px}.detail-heading h2{font-size:18px}.chapter-detail{padding:23px}.video-pending{padding:23px}.video-pending h2{font-size:23px}.play-mark{width:52px;height:52px;margin-bottom:15px}.video-pending p{font-size:10px}}
+    @media(max-width:820px){.course{grid-template-columns:1fr}.index{position:static;max-height:540px;grid-row:2}.watch{display:contents}.stage,.tools,.playback-status,.index,.chapter-detail,.downloads{grid-column:1;min-width:0}.stage{grid-row:1}.tools{grid-row:2;margin-top:-18px}.playback-status{grid-row:3;margin:-7px 2px 0}.index{grid-row:4}.chapter-detail{grid-row:5}.downloads{grid-row:6;margin-top:2px}.course{gap:18px}.course-meta{display:none}.stage{border-radius:12px 12px 0 0}.top-label{display:none}.intro{padding:27px 0 23px}.intro p{font-size:11px}.index-head{padding:20px 20px 13px}.index-foot{padding:10px 20px}.chapter-list{max-height:330px}.index-title{margin-bottom:13px}.group-title{padding-top:10px}.chapter-row-title{font-size:11px}.chapter-row{padding:12px 11px}.index-head .filters{margin-top:10px}.transcript-content{font-size:12px}}
+    @media(max-width:480px){.wrap{width:calc(100% - 28px)}.top .wrap{min-height:72px;gap:12px}.brand img{width:143px}.back-link{font-size:8px;gap:5px}.intro h1{font-size:27px}.intro p{font-size:10px;line-height:1.8}.eyebrow{font-size:8px}.video-pending{padding:17px}.video-pending:before{top:12%}.pending-kicker{font-size:7px;margin-bottom:7px}.video-pending h2{font-size:18px}.video-pending p{font-size:8px;margin-top:8px}.video-pending .pending-tag{display:none}.play-mark{width:37px;height:37px;margin-bottom:11px}.play-mark svg{width:11px;height:16px}.tools{padding:9px 12px;min-height:59px;gap:9px}.transport{gap:5px}.clock{font-size:9px;padding-left:4px}.speed{font-size:8px;gap:4px}.speed select{font-size:9px;padding:4px}.icon-button{width:30px;height:32px;font-size:10px}.chapter-detail{padding:22px 20px}.detail-heading h2{font-size:19px}.chapter-position{font-size:8px;white-space:nowrap}.chapter-description{gap:12px}.timestamp-note{font-size:8px}.downloads{align-items:start;gap:10px}.downloads h3{font-size:10px}.download{font-size:8px;padding:8px}.downloads p{font-size:8px;max-width:170px}.download-actions{gap:5px}.foot .wrap{display:block;font-size:8px}.foot p+p{margin-top:9px}.transcript-content{font-size:11px}.primary{font-size:9px}.chapter-nav button{font-size:9px}.playback-status{font-size:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o treinamento</a>
+  <header class="top"><div class="wrap"><div class="top-left"><a class="brand" href="../../index.html" aria-label="SFR Resgate Digital, apresentação"><img src="assets/logo-sfr-white.png" width="199" height="38" alt="SFR Resgate Digital"></a><span class="top-label">Central de treinamento</span></div><a class="back-link" href="../../index.html"><span aria-hidden="true">←</span> Conheça o SFR</a></div></header>
+  <main class="wrap" id="conteudo" tabindex="-1">
+    <div class="intro"><div><span class="eyebrow">Do primeiro acesso ao encerramento</span><h1>Treinamento do SFR</h1><p>Acompanhe o vídeo na sequência ou encontre o assunto de que precisa.<br>O app de campo e o painel, com uma transcrição para cada capítulo.</p></div><div class="course-meta"><div class="meta-count"><strong id="total-count">29</strong><span>capítulos</span></div><div class="meta-kind">App de campo<br>Painel e operação web</div></div></div>
+    <noscript><p class="noscript">Ative o JavaScript para consultar o índice. Os roteiros também estão disponíveis em <a href="inventario-mobile.md">App de campo</a> e <a href="inventario-web.md">Painel web</a>.</p></noscript>
+    <div class="course">
+      <section class="watch" aria-label="Vídeo e transcrição">
+        <div class="stage"><video id="video" controls playsinline preload="metadata" aria-label="Vídeo completo do treinamento SFR"></video><div id="video-pending" class="video-pending"><div class="pending-inner"><div class="play-mark" aria-hidden="true"><svg viewBox="0 0 20 24"><path d="M0 0 20 12 0 24Z"/></svg></div><div class="pending-kicker">SFR · Resgate Digital</div><h2>Um capítulo de cada vez.</h2><p id="pending-copy">O vídeo está em preparação.<br>Explore o índice e leia a transcrição enquanto isso.</p><span class="pending-tag">App de campo · Painel · Administração</span></div></div></div>
+        <div class="tools"><div class="transport"><button id="back-ten" class="icon-button" type="button" aria-label="Voltar 10 segundos" disabled>−10</button><button id="forward-ten" class="icon-button" type="button" aria-label="Avançar 10 segundos" disabled>+10</button><span class="clock" id="clock" aria-label="Tempo do vídeo">— / —</span></div><label class="speed">Velocidade <select id="speed" disabled aria-label="Velocidade de reprodução"><option value="0.75">0,75×</option><option value="1" selected>1×</option><option value="1.25">1,25×</option><option value="1.5">1,5×</option><option value="1.75">1,75×</option><option value="2">2×</option></select></label></div>
+        <p class="playback-status" id="playback-status" role="status">Vídeo e marcações de tempo em preparação. A transcrição já está disponível.</p>
+        <article class="chapter-detail" aria-labelledby="chapter-title"><div class="detail-heading"><div><span class="eyebrow" id="chapter-group">App de campo</span><h2 id="chapter-title">Carregando capítulos…</h2></div><span class="chapter-position" id="chapter-position"></span></div><div class="chapter-description"><button type="button" class="primary" id="play-chapter" disabled><span aria-hidden="true">▶</span> Assistir a partir daqui</button><span class="timestamp-note" id="timestamp-note">Início ainda não definido</span></div><details class="transcript" open><summary>Transcrição do capítulo</summary><div class="transcript-content" id="transcript"></div></details><nav class="chapter-nav" aria-label="Navegar entre capítulos"><button id="previous" type="button"><span aria-hidden="true">←</span> Capítulo anterior</button><button id="next" type="button">Próximo capítulo <span aria-hidden="true">→</span></button></nav></article>
+        <section class="downloads" aria-label="Downloads do vídeo"><div><h3>Leve o treinamento com você</h3><p id="download-note">Downloads disponíveis após a montagem final.</p></div><div class="download-actions"><a class="download" id="download-vtt" download hidden>↓ Legendas VTT</a><a class="download" id="download-1080" download hidden>↓ 1080p</a><span class="download unavailable" id="pending-1080" aria-label="Download 1080p ainda indisponível">↓ 1080p</span><a class="download" id="download-720" download hidden>↓ 720p</a><span class="download unavailable" id="pending-720" aria-label="Download 720p ainda indisponível">↓ 720p</span></div></section>
+      </section>
+      <aside class="index" aria-labelledby="index-title"><div class="index-head"><div class="index-title"><h2 id="index-title">Conteúdo do treinamento</h2><span id="index-total">29</span></div><div class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" class="search" type="search" placeholder="Buscar assunto ou palavra…" aria-label="Buscar nos capítulos e transcrições" autocomplete="off"><button type="button" id="clear-search" class="clear-search" aria-label="Limpar busca" hidden>×</button></div><div class="filters" role="group" aria-label="Filtrar capítulos"><button data-group="all" type="button" aria-pressed="true">Todos</button><button data-group="mobile" type="button" aria-pressed="false">App de campo</button><button data-group="web" type="button" aria-pressed="false">Painel web</button></div><p id="index-count" class="index-count" role="status"></p></div><nav id="chapter-list" class="chapter-list" aria-label="Capítulos do treinamento"></nav><p class="index-foot" id="index-note">Selecione um capítulo para consultar a transcrição.</p></aside>
+    </div>
+  </main>
+  <footer class="foot"><div class="wrap"><p>SFR Resgate Digital · Demonstração local com dados fictícios.</p><p><a href="inventario-mobile.md">Conteúdo do app</a> · <a href="inventario-web.md">Conteúdo do painel</a></p></div></footer>
+  <script src="tutorial-data.js"></script>
+  <script>
+    (() => {
+      'use strict';
+      const data = window.SFR_TUTORIAL;
+      const $ = (id) => document.getElementById(id);
+      if (!data || !Array.isArray(data.chapters) || !data.chapters.length) {
+        $('chapter-title').textContent = 'Conteúdo indisponível';
+        $('playback-status').textContent = 'Não foi possível abrir o índice. Mantenha tutorial-data.js junto desta página.';
+        $('previous').disabled = $('next').disabled = true;
+        return;
+      }
+      const chapters = data.chapters;
+      const video = $('video');
+      const normal = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      const isTimed = (chapter) => typeof chapter.start === 'number' && Number.isFinite(chapter.start) && chapter.start >= 0;
+      const format = (time) => {
+        if (typeof time !== 'number' || !Number.isFinite(time)) return '—';
+        const total = Math.max(0, Math.floor(time));
+        const h = Math.floor(total / 3600), m = Math.floor(total / 60) % 60, s = total % 60;
+        return (h ? `${h}:${String(m).padStart(2, '0')}` : String(m)) + ':' + String(s).padStart(2, '0');
+      };
+      let selected = chapters[0].id;
+      let filter = 'all';
+      let mediaReady = Boolean(data.media.ready);
+      const searchText = new Map(chapters.map((c) => [c.id, normal(`${c.title} ${c.narration} ${c.groupLabel}`)]));
+      $('total-count').textContent = $('index-total').textContent = chapters.length;
+      function renderIndex() {
+        const query = normal($('search').value.trim());
+        const visible = chapters.filter((c) => (filter === 'all' || c.group === filter) && (!query || searchText.get(c.id).includes(query)));
+        $('clear-search').hidden = !query;
+        $('index-count').textContent = `${visible.length} de ${chapters.length} capítulos${query ? ' encontrados' : ''}`;
+        const list = $('chapter-list');
+        list.replaceChildren();
+        if (!visible.length) {
+          const empty = document.createElement('p'); empty.className = 'empty';
+          const title = document.createElement('strong'); title.textContent = 'Nenhum capítulo encontrado';
+          empty.append(title, document.createTextNode('Tente outra palavra ou selecione Todos.')); list.append(empty); return;
+        }
+        let lastGroup = '';
+        for (const chapter of visible) {
+          if (chapter.group !== lastGroup) {
+            const group = document.createElement('p'); group.className = 'group-title'; group.textContent = chapter.groupLabel; list.append(group); lastGroup = chapter.group;
+          }
+          const button = document.createElement('button'); button.type = 'button'; button.className = 'chapter-row'; button.dataset.id = chapter.id; button.setAttribute('aria-pressed', String(chapter.id === selected));
+          const number = document.createElement('span'); number.className = 'chapter-number'; number.textContent = String(chapters.indexOf(chapter) + 1).padStart(2, '0');
+          const body = document.createElement('span'); body.className = 'chapter-row-body';
+          const title = document.createElement('span'); title.className = 'chapter-row-title'; title.textContent = chapter.title;
+          const time = document.createElement('span'); time.className = `chapter-row-time${isTimed(chapter) ? '' : ' pending'}`; time.textContent = isTimed(chapter) ? format(chapter.start) : 'Transcrição disponível';
+          const mark = document.createElement('span'); mark.className = 'current-mark'; mark.setAttribute('aria-hidden', 'true');
+          body.append(title, time); button.append(number, body, mark); button.addEventListener('click', () => selectChapter(chapter.id, true)); list.append(button);
+        }
+      }
+      function selectChapter(id, seek = false) {
+        const chapter = chapters.find((c) => c.id === id); if (!chapter) return;
+        selected = id;
+        const position = chapters.indexOf(chapter);
+        $('chapter-title').textContent = chapter.title;
+        $('chapter-group').textContent = chapter.groupLabel;
+        $('chapter-position').textContent = `${position + 1} / ${chapters.length}`;
+        $('timestamp-note').textContent = isTimed(chapter) ? `Início em ${format(chapter.start)}` : 'Início ainda não definido';
+        $('play-chapter').disabled = !mediaReady || !isTimed(chapter);
+        $('previous').disabled = position === 0;
+        $('next').disabled = position === chapters.length - 1;
+        $('transcript').replaceChildren(...chapter.narration.split(/\n+/).filter(Boolean).map((text) => { const p = document.createElement('p'); p.textContent = text; return p; }));
+        document.querySelectorAll('.chapter-row').forEach((row) => row.setAttribute('aria-pressed', String(row.dataset.id === id)));
+        try { history.replaceState(null, '', `#${encodeURIComponent(id)}`); } catch (_) { /* file:// may restrict history */ }
+        if (seek && mediaReady && isTimed(chapter)) {
+          if (video.readyState >= 1) video.currentTime = chapter.start;
+          else video.addEventListener('loadedmetadata', () => { video.currentTime = chapter.start; }, { once: true });
+        }
+      }
+      $('search').addEventListener('input', renderIndex);
+      $('clear-search').addEventListener('click', () => { $('search').value = ''; renderIndex(); $('search').focus(); });
+      document.querySelectorAll('[data-group]').forEach((button) => button.addEventListener('click', () => {
+        filter = button.dataset.group;
+        document.querySelectorAll('[data-group]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        renderIndex();
+      }));
+      $('previous').addEventListener('click', () => { const index = chapters.findIndex((c) => c.id === selected); if (index > 0) selectChapter(chapters[index - 1].id, true); });
+      $('next').addEventListener('click', () => { const index = chapters.findIndex((c) => c.id === selected); if (index + 1 < chapters.length) selectChapter(chapters[index + 1].id, true); });
+      $('play-chapter').addEventListener('click', async () => { selectChapter(selected, true); try { await video.play(); } catch (_) { $('playback-status').textContent = 'Use o botão de reprodução do vídeo para continuar.'; } });
+      $('speed').addEventListener('change', () => { video.playbackRate = Number($('speed').value); });
+      $('back-ten').addEventListener('click', () => { video.currentTime = Math.max(0, video.currentTime - 10); });
+      $('forward-ten').addEventListener('click', () => { video.currentTime = Math.min(video.duration || 0, video.currentTime + 10); });
+      video.addEventListener('timeupdate', () => {
+        $('clock').textContent = `${format(video.currentTime)} / ${format(video.duration)}`;
+        if (!video.paused) { const current = chapters.filter((c) => isTimed(c) && c.start <= video.currentTime).at(-1); if (current && current.id !== selected) selectChapter(current.id); }
+      });
+      video.addEventListener('loadedmetadata', () => {
+        $('video-pending').hidden = true;
+        $('clock').textContent = `${format(video.currentTime)} / ${format(video.duration)}`;
+        $('playback-status').textContent = data.media.captionsReady ? 'Legendas em português disponíveis no controle do vídeo.' : 'Use o índice para navegar e acompanhe a transcrição abaixo.';
+      });
+      video.addEventListener('error', () => {
+        mediaReady = false; $('video-pending').hidden = false;
+        $('pending-copy').textContent = 'O vídeo não pôde ser aberto. A transcrição e o índice continuam disponíveis.';
+        $('playback-status').textContent = 'Confira se o arquivo de vídeo acompanha este treinamento.';
+        $('speed').disabled = $('back-ten').disabled = $('forward-ten').disabled = true;
+        selectChapter(selected);
+      });
+      if (mediaReady) {
+        video.src = data.media.video720;
+        $('speed').disabled = $('back-ten').disabled = $('forward-ten').disabled = false;
+        $('pending-copy').textContent = 'Abrindo o vídeo…';
+        $('playback-status').textContent = 'Carregando vídeo completo…';
+        $('index-note').textContent = chapters.some(isTimed) ? 'Selecione um capítulo para ir ao trecho e consultar a transcrição.' : 'Marcações de tempo em preparação. Consulte a transcrição.';
+        if (data.media.captionsReady && Array.isArray(data.media.captionCues)) {
+          const track = video.addTextTrack('captions', 'Português', 'pt-BR');
+          for (const cue of data.media.captionCues) {
+            if (Number.isFinite(cue.start) && Number.isFinite(cue.end) && cue.start >= 0 && cue.end > cue.start && typeof cue.text === 'string') {
+              track.addCue(new VTTCue(cue.start, cue.end, cue.text));
+            }
+          }
+          track.mode = 'showing';
+          const download = $('download-vtt');
+          download.href = data.media.captions;
+          download.hidden = false;
+        }
+      }
+      for (const resolution of ['720', '1080']) {
+        const media = data.media[`download${resolution}`];
+        if (media) { const link = $(`download-${resolution}`); link.href = media.src; link.hidden = false; $(`pending-${resolution}`).hidden = true; $('download-note').textContent = 'Escolha a resolução para assistir também offline.'; }
+      }
+      renderIndex();
+      const hash = decodeURIComponent(location.hash.slice(1));
+      selectChapter(chapters.some((c) => c.id === hash) ? hash : chapters[0].id, true);
+    })();
+  </script>
+</body>
+</html>

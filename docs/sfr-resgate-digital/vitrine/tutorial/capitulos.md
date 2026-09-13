@@ -1,0 +1,31 @@
+# Capítulos do treinamento
+
+- 00:00:20 — Entrar, conferir a ambulância e reconhecer a navegação
+- 00:01:55 — Encontrar a ocorrência e a vítima certas
+- 00:03:29 — Abrir uma ocorrência com horário e local
+- 00:05:05 — Completar os dados compartilhados da ocorrência
+- 00:06:44 — Registrar participantes, responsável e médicos reguladores
+- 00:08:18 — Criar a vítima e montar o roteiro da ficha
+- 00:09:52 — Preencher XABCDE, cinemática e sinais vitais
+- 00:11:29 — Usar as telas de escalas adultas e pediátricas
+- 00:13:06 — Marcar lesões e registrar áreas de queimadura
+- 00:14:46 — Registrar evolução, materiais e receita
+- 00:16:21 — Gravar rascunhos e acompanhar a transcrição
+- 00:18:08 — Fotografar cena e documento, depois revisar os campos
+- 00:19:46 — Registrar desfecho, recusa, óbito e assinaturas
+- 00:21:24 — Concluir ficha e ocorrência, gerar PDF e pedir cópia
+- 00:22:59 — Corrigir, anular e restaurar sem confundir os registros
+- 00:24:37 — Sincronizar, recuperar acesso e resolver divergências
+- 00:26:17 — Consultar o aparelho, exportar backup e encerrar a sessão
+- 00:28:38 — Entrar e reconhecer seu ambiente
+- 00:30:11 — Encontrar e acompanhar ocorrências
+- 00:31:40 — Ler a ficha, consultar anexos e emitir documentos
+- 00:33:14 — Gerar relatórios e consultar indicadores
+- 00:34:47 — Criar pessoas e administrar acessos
+- 00:36:22 — Manter viaturas e participantes operacionais
+- 00:37:57 — Cadastrar bases, concessionárias e clientes destinatários
+- 00:39:37 — Preparar materiais, farmácia e versões do FAR
+- 00:41:16 — Criar uma ocorrência operacional e organizar a equipe
+- 00:42:52 — Preencher vítimas e o FAR com revisão consciente
+- 00:44:27 — Resolver pendências e preservar o histórico clínico
+- 00:46:03 — Solicitar cópias, acompanhar entregas e consultar auditoria
