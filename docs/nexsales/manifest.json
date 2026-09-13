@@ -1,0 +1,24 @@
+{
+  "project": "nexsales",
+  "title": "NexSales — A IA que atende, qualifica e agenda pelo WhatsApp",
+  "generated_at": "2026-09-13",
+  "narration": {
+    "engine": "omnivoice-local",
+    "voice_profile_id": "04b04ba5",
+    "voice_name": "Lucas Oliveira — OFICIAL #1 · Studio Clean v2",
+    "invisible_watermark": false,
+    "note": "Narracao regenerada em 2026-09-13 apos correcao do AudioSeal (watermark.invisible=false em prefs.json). Primeira versao continha tom audivel da marca d'agua."
+  },
+  "video": {
+    "master": "~/Videos/nexsales-promo-1080p.mp4",
+    "duration_s": 76.9,
+    "resolution": "1920x1080",
+    "web": "media/demo-720p.mp4",
+    "poster_at_s": 14
+  },
+  "recording": {
+    "bench": "agent-bench nexsales-promo (:87, 1600x1000)",
+    "app": "NexSales local http://localhost:3210, Postgres local, tenant demo Studio Lumina",
+    "scenes": ["slide-abertura", "conversas", "crm", "agenda", "contatos", "dashboard", "slide-fechamento"]
+  }
+}
